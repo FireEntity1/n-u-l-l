@@ -2,9 +2,11 @@ extends CharacterBody2D
 
 
 const SPEED = 700.0
-const JUMP_VELOCITY = -700.0
+const JUMP_VELOCITY = -900.0
 var gravity = 1600
 var slammed = false
+
+var jumps = 2
 
 var dir = 0
 
@@ -17,31 +19,35 @@ func _ready():
 func _physics_process(delta):
 	var direction = Input.get_axis("left", "right")
 	
+	if is_on_floor():
+		jumps = 2
+	
 	if not is_on_floor():
+	
 		if not slammed:
 			velocity.y += gravity * delta
 		else:
-			velocity.y += 30 * gravity * delta
+			velocity.y = 5000
 			
-		if $sprite.scale.x > 0.9:
-			$sprite.scale.x -= 0.08
-		if $sprite.scale.y < 1.3:
-			$sprite.scale.y += 0.08
+			$sprite.scale.x = 0.9
+			$sprite.scale.y = 2
+
 	else:
-		if $sprite.scale.x < 1.25:
-			$sprite.scale.x += 0.05
-		if $sprite.scale.y > 1.1:
-			$sprite.scale.y -= 0.1
+		$sprite.scale.x = lerp($sprite.scale.x, 1.25, 0.2)
+		$sprite.scale.y = lerp($sprite.scale.y, 1.1, 0.2)
 		slammed = false
+
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		jumps -= 1
+	elif Input.is_action_just_pressed("jump") and jumps > 0:
+		jumps = 0
 		velocity.y = JUMP_VELOCITY
 	
 	if Input.is_action_just_pressed("slam"):
 		slammed = true
 		
-	if Global.get_kill_status():
-		get_tree().reload_current_scene()
 	
 	if (Input.is_action_pressed("left") or Input.is_action_pressed("right")) and is_on_floor():
 		pass
@@ -54,6 +60,8 @@ func _physics_process(delta):
 		
 	if dashing:
 		velocity.x = dir*2600
+		$sprite.scale.x = 3
+		$sprite.scale.y = 0.8
 		
 	if Input.is_action_just_pressed("dash") and canDash:
 		dashing = true
@@ -61,6 +69,12 @@ func _physics_process(delta):
 		$dashTimer.start()
 		$dashCool.start()
 		
+	if Global.get_kill_status():
+		print("killed!")
+		if Global.shouldReset():
+			get_tree().reload_current_scene()
+		else:
+			position = Global.getSpawn()
 	move_and_slide()
 
 
@@ -69,6 +83,7 @@ func _on_dash_cool_timeout():
 
 func _on_dash_timer_timeout():
 	dashing = false
+	$sprite.scale = Vector2(1.25,1.1)
 
 func _on_area_entered(area: Area2D):
 	print(area.name)

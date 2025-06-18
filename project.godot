@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="null"
-run/main_scene="res://scenes/level1.tscn"
+run/main_scene="res://levels/level1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -26,11 +26,14 @@ directories/dch_directory={
 "NORA": "res://dialogic/NORA.dch"
 }
 directories/dtl_directory={
-"level1": "res://dialogic/level1.dtl"
+"level1": "res://dialogic/level1.dtl",
+"level1end": "res://dialogic/level1end.dtl"
 }
 variables={
 "choice": ""
 }
+layout/style_list=["res://dialogic/style.tres"]
+layout/default_style="res://dialogic/style.tres"
 
 [display]
 

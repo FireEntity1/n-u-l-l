@@ -1,11 +1,11 @@
-set {choice} = "wasd"
+[style name="style"]
 join NORA center
-NORA: Welcome --USER--! (X or ENTER)
+NORA: Welcome --SUBJECT--! \
+(X or ENTER)
 NORA: During this excercise, you'll learn how to control your character!
-NORA: Use AD or arrow keys to move
-NORA: Space, Up, or W to jump
-NORA: S or Down to ground slam
-And Shift/Control to dash!
+NORA: Try using your WASD/Arrow keys to move!
+NORA: You can also press space to jump.
+NORA: Control/Shift makes you dash to the side!
 NORA: Got it?
 NORA: Now make your way to the end of the level!
 [end_timeline]

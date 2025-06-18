@@ -1,14 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dav5twmuvn8o0"]
+[gd_scene load_steps=6 format=3 uid="uid://dav5twmuvn8o0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ytl57"]
 [ext_resource type="Texture2D" uid="uid://uk4r5icpm5js" path="res://sprites/player.png" id="2_2a4mc"]
+[ext_resource type="Shader" path="res://shaders/motionblur.gdshader" id="2_iv0wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yaalc"]
 size = Vector2(38, 32)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eby8u"]
+shader = ExtResource("2_iv0wf")
+shader_parameter/dir = Vector2(0, 0)
+shader_parameter/quality = 2
+
 [node name="Player" type="Node2D"]
 
 [node name="character" type="CharacterBody2D" parent="."]
+scale = Vector2(1.4, 1.4)
 script = ExtResource("1_ytl57")
 
 [node name="collision" type="CollisionShape2D" parent="character"]
@@ -16,12 +23,14 @@ position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_yaalc")
 
 [node name="sprite" type="Sprite2D" parent="character"]
+material = SubResource("ShaderMaterial_eby8u")
 position = Vector2(1, -1)
 scale = Vector2(1.25, 1.1)
 texture = ExtResource("2_2a4mc")
 
 [node name="camera" type="Camera2D" parent="character"]
-position = Vector2(0, -13)
+position = Vector2(0, -29.2857)
+zoom = Vector2(0.8, 0.8)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
@@ -29,6 +38,7 @@ rotation_smoothing_enabled = true
 wait_time = 0.1
 
 [node name="dashCool" type="Timer" parent="character"]
+wait_time = 0.2
 
 [connection signal="timeout" from="character/dashTimer" to="character" method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="character/dashCool" to="character" method="_on_dash_cool_timeout"]
