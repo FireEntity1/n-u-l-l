@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://cfpcmbj31aaqw"]
+
+[ext_resource type="Texture2D" uid="uid://bkbdrgwb2dnm8" path="res://sprites/flag.png" id="1_71d22"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by6fh"]
+atlas = ExtResource("1_71d22")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0a75"]
+atlas = ExtResource("1_71d22")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdi3a"]
+atlas = ExtResource("1_71d22")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqtdd"]
+atlas = ExtResource("1_71d22")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17ow5"]
+atlas = ExtResource("1_71d22")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i50s0"]
+atlas = ExtResource("1_71d22")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvwtk"]
+atlas = ExtResource("1_71d22")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bey5a"]
+atlas = ExtResource("1_71d22")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxqnx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by6fh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0a75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdi3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqtdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17ow5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i50s0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvwtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bey5a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="EndFlag" type="Node2D"]
+
+[node name="flag" type="AnimatedSprite2D" parent="."]
+scale = Vector2(14.125, 14.125)
+sprite_frames = SubResource("SpriteFrames_lxqnx")
+autoplay = "default"

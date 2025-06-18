@@ -1,21 +1,31 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0vkrjuc1dpve"]
+[gd_scene load_steps=11 format=3 uid="uid://b0vkrjuc1dpve"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_178lb"]
 [ext_resource type="PackedScene" uid="uid://b8stysvvq1cyy" path="res://components/platform.tscn" id="2_ajspr"]
+[ext_resource type="Shader" path="res://shaders/sky.gdshader" id="2_uplff"]
 [ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="3_os2vn"]
 [ext_resource type="PackedScene" uid="uid://c50in8lqomyea" path="res://components/killbox.tscn" id="4_1sq5h"]
 [ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="5_n3ekb"]
 [ext_resource type="Resource" path="res://dialogic/level1.dtl" id="6_lbf0e"]
 [ext_resource type="Resource" path="res://dialogic/level1end.dtl" id="7_xx0x8"]
+[ext_resource type="PackedScene" uid="uid://cfpcmbj31aaqw" path="res://components/end_flag.tscn" id="9_bfm2e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_teaq3"]
+shader = ExtResource("2_uplff")
+shader_parameter/cloud_density = 0.6
+shader_parameter/pixel_size = 64.0
+shader_parameter/cloud_amount = 32.0
+shader_parameter/animate_clouds = false
 
 [node name="l1" type="Node2D"]
 script = ExtResource("1_178lb")
 
 [node name="bg" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_teaq3")
 offset_left = -2353.0
-offset_top = -3461.0
-offset_right = 6352.0
-offset_bottom = 1064.0
+offset_top = -6189.0
+offset_right = 13658.0
+offset_bottom = 2741.0
 color = Color(0.5488, 0.778773, 0.98, 1)
 
 [node name="Platform" parent="." instance=ExtResource("2_ajspr")]
@@ -48,17 +58,50 @@ position = Vector2(3286, -1799)
 [node name="Platform10" parent="." instance=ExtResource("2_ajspr")]
 position = Vector2(4259, -1999)
 
-[node name="Player" parent="." instance=ExtResource("3_os2vn")]
-position = Vector2(-370, -57)
+[node name="Platform11" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(5157, -2231)
+
+[node name="Platform12" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(6054, -2155)
+
+[node name="Platform13" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(6830, -2352)
+
+[node name="Platform14" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(7616, -2553)
+
+[node name="Platform15" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(8478, -2644)
+
+[node name="Platform16" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(9274, -2775)
+
+[node name="Platform17" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(8755, -3087)
+
+[node name="Platform18" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(9576, -3294)
+
+[node name="Platform19" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(10292, -3329)
+
+[node name="Platform20" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(11189, -3450)
 
 [node name="killbox" parent="." instance=ExtResource("4_1sq5h")]
-position = Vector2(2676, 3017)
-scale = Vector2(-178.588, 70.5458)
+position = Vector2(5272, 2633)
+scale = Vector2(-312.227, 65.3613)
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("5_n3ekb")]
 position = Vector2(-168, -219)
 timeline = ExtResource("6_lbf0e")
 
 [node name="DialogueTrigger2" parent="." instance=ExtResource("5_n3ekb")]
-position = Vector2(4245, -2242)
+position = Vector2(11174, -3683)
 timeline = ExtResource("7_xx0x8")
+
+[node name="EndFlag" parent="." instance=ExtResource("9_bfm2e")]
+position = Vector2(11186, -3738)
+
+[node name="Player" parent="." instance=ExtResource("3_os2vn")]
+position = Vector2(-370, -57)
