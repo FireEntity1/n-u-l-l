@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bne55qhi4obev"]
+
+[ext_resource type="Script" path="res://scripts/dialogue_clearer.gd" id="1_78p4p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsl5o"]
+size = Vector2(316, 342)
+
+[node name="DialogueClearer" type="Node2D"]
+script = ExtResource("1_78p4p")
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="area"]
+shape = SubResource("RectangleShape2D_lsl5o")
+
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]

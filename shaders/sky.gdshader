@@ -1,5 +1,6 @@
 shader_type canvas_item;
 
+uniform vec3 sky_color = vec3(0.4, 0.7, 1.0);
 uniform float cloud_density = 0.5;
 uniform float pixel_size = 64.0;
 uniform float cloud_amount = 10.0;
@@ -29,7 +30,6 @@ void fragment() {
     }
     float noise = clumpy_noise(noise_uv);
     float cloud = step(cloud_density, noise);
-    vec3 sky_color = vec3(0.4, 0.7, 1.0);
     vec3 final_color = mix(sky_color, vec3(1.0), cloud * 0.7);
     COLOR = vec4(final_color, 1.0);
 }

@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -900.0
 var gravity = 1600
 var slammed = false
 
+var reset = false # death
+
 var jumps = 2
 
 var dir = 0
@@ -31,6 +33,7 @@ func _physics_process(delta):
 			
 			$sprite.scale.x = 0.9
 			$sprite.scale.y = 2
+		
 
 	else:
 		$sprite.scale.x = lerp($sprite.scale.x, 1.25, 0.2)
@@ -47,7 +50,9 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("slam"):
 		slammed = true
-		
+	if Input.is_action_just_pressed("slam") and is_on_floor():
+		$sprite.scale.x = 1.5
+		$sprite.scale.y = 0.8
 	
 	if (Input.is_action_pressed("left") or Input.is_action_pressed("right")) and is_on_floor():
 		pass
@@ -69,14 +74,13 @@ func _physics_process(delta):
 		$dashTimer.start()
 		$dashCool.start()
 		
-	if Global.get_kill_status():
-		print("killed!")
-		if Global.shouldReset():
-			get_tree().reload_current_scene()
-		else:
-			position = Global.getSpawn()
 	move_and_slide()
 
+func kill(resetScene):
+	if resetScene:
+		get_tree().reload_current_scene()
+	else:
+		position = Global.getSpawn()
 
 func _on_dash_cool_timeout():
 	canDash = true

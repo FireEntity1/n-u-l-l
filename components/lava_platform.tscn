@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bc2hqrqw8d0oa"]
+
+[ext_resource type="Texture2D" uid="uid://cydqqmrmn58xq" path="res://sprites/lava-platform-1.png" id="1_7kl84"]
+[ext_resource type="PackedScene" uid="uid://c50in8lqomyea" path="res://components/killbox.tscn" id="2_2ac16"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ri4d"]
+atlas = ExtResource("1_7kl84")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtugm"]
+atlas = ExtResource("1_7kl84")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_66ilb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ri4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtugm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_envcd"]
+size = Vector2(499, 122.5)
+
+[node name="Platform" type="Node2D"]
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 1)
+scale = Vector2(10.5088, 10.5088)
+sprite_frames = SubResource("SpriteFrames_66ilb")
+autoplay = "default"
+frame_progress = 0.814592
+
+[node name="static" type="StaticBody2D" parent="."]
+
+[node name="col" type="CollisionShape2D" parent="static"]
+position = Vector2(-1.5, 1.25)
+shape = SubResource("RectangleShape2D_envcd")
+
+[node name="killbox" parent="." instance=ExtResource("2_2ac16")]
+position = Vector2(-6, -29)
+scale = Vector2(4.76, 1)

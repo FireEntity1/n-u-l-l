@@ -1,4 +1,4 @@
 join NORA center
 NORA: Congratulations --SUBJECT--!
-Let's try a harder challenge now.
+NORA: Let's try a harder challenge now.
 do Global.changeLevel(2)
