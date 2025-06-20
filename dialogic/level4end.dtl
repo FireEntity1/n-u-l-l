@@ -1,0 +1,3 @@
+do Global.fade_to(1)
+[wait time="2.0"]
+???: <Empty Text Event>

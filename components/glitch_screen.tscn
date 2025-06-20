@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1kdks6a3e8gq"]
 
-[ext_resource type="Shader" path="res://shaders/crt.gdshader" id="1_djk57"]
+[ext_resource type="Shader" path="res://shaders/glitch.gdshader" id="1_djk57"]
 [ext_resource type="AudioStream" uid="uid://dylute2yv4vjv" path="res://audio/sfx/glitch.mp3" id="2_3bgra"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bo4xd"]

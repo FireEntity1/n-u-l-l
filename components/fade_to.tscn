@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://btd5b2ihpguho"]
+
+[ext_resource type="Script" path="res://scripts/fade_to.gd" id="1_lgm1v"]
+
+[node name="FadeTo" type="Node2D"]
+script = ExtResource("1_lgm1v")
+
+[node name="layer" type="CanvasLayer" parent="."]
+
+[node name="color" type="ColorRect" parent="layer"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1936.0
+offset_bottom = 1091.0

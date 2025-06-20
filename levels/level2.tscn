@@ -29,8 +29,8 @@ scroll_scale = Vector2(0.7, 0.9)
 
 [node name="bg" type="Sprite2D" parent="parallax"]
 modulate = Color(1, 1, 1, 0.388235)
-position = Vector2(5559, -3668.5)
-scale = Vector2(28.8156, 34.0031)
+position = Vector2(5127, -3668.5)
+scale = Vector2(27.4656, 34.0031)
 texture = ExtResource("1_wkm6j")
 metadata/_edit_use_anchors_ = true
 
@@ -39,8 +39,8 @@ scroll_scale = Vector2(0.4, 0.3)
 
 [node name="cloud" type="Sprite2D" parent="parallax2"]
 modulate = Color(1, 1, 1, 0.384314)
-position = Vector2(5331, -2953)
-scale = Vector2(29.9062, 24.7187)
+position = Vector2(4747, -2953)
+scale = Vector2(28.0812, 24.7187)
 texture = ExtResource("2_bdq6i")
 
 [node name="EndFlag" parent="." instance=ExtResource("2_cpa2l")]
@@ -118,3 +118,6 @@ position = Vector2(633, -11)
 [node name="DialogueTrigger4" parent="." instance=ExtResource("5_3gq6j")]
 position = Vector2(10159, -2211)
 timeline = ExtResource("12_wvrdc")
+
+[node name="Platform3" parent="." instance=ExtResource("8_xlw8f")]
+position = Vector2(6613, -1623)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dri2io83h5l1d"]
+
+[ext_resource type="Shader" path="res://shaders/static.gdshader" id="1_hdvpl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3sauy"]
+shader = ExtResource("1_hdvpl")
+shader_parameter/amount = 20.0
+
+[node name="Static" type="Node2D"]
+
+[node name="layer" type="CanvasLayer" parent="."]
+
+[node name="rect" type="ColorRect" parent="layer"]
+material = SubResource("ShaderMaterial_3sauy")
+offset_right = 1944.0
+offset_bottom = 1094.0

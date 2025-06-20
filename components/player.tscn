@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dav5twmuvn8o0"]
+[gd_scene load_steps=7 format=3 uid="uid://dav5twmuvn8o0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ytl57"]
 [ext_resource type="Texture2D" uid="uid://uk4r5icpm5js" path="res://sprites/player.png" id="2_2a4mc"]
@@ -11,6 +11,17 @@ size = Vector2(38, 32)
 shader = ExtResource("2_iv0wf")
 shader_parameter/dir = Vector2(0, 0)
 shader_parameter/quality = 2
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qsg7g"]
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 359.16
+initial_velocity_max = 591.55
+angular_velocity_min = -263.67
+angular_velocity_max = 253.52
+gravity = Vector3(0, 98, 0)
+scale_min = 10.0
+scale_max = 10.0
 
 [node name="Player" type="Node2D"]
 
@@ -39,6 +50,11 @@ wait_time = 0.1
 
 [node name="dashCool" type="Timer" parent="character"]
 wait_time = 0.2
+
+[node name="particles" type="GPUParticles2D" parent="character"]
+emitting = false
+amount = 128
+process_material = SubResource("ParticleProcessMaterial_qsg7g")
 
 [connection signal="timeout" from="character/dashTimer" to="character" method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="character/dashCool" to="character" method="_on_dash_cool_timeout"]

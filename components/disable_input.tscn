@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bal07flcgeqb0"]
+
+[ext_resource type="Script" path="res://scripts/disable_input.gd" id="1_nd4qw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nedoj"]
+size = Vector2(452, 444)
+
+[node name="DisableInput" type="Node2D"]
+script = ExtResource("1_nd4qw")
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="area"]
+shape = SubResource("RectangleShape2D_nedoj")
+
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]

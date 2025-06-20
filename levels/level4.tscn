@@ -1,0 +1,378 @@
+[gd_scene load_steps=23 format=3 uid="uid://cbrtn4psfa4ux"]
+
+[ext_resource type="Texture2D" uid="uid://ck3p1ou575wr4" path="res://sprites/clouds-2.png" id="1_wlbnq"]
+[ext_resource type="Texture2D" uid="uid://lfmgp0vbt5ug" path="res://sprites/clouds.png" id="2_md4tl"]
+[ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="3_4ug6n"]
+[ext_resource type="Texture2D" uid="uid://c204vlx72ch2o" path="res://sprites/orb.png" id="3_8kdcy"]
+[ext_resource type="PackedScene" uid="uid://b8stysvvq1cyy" path="res://components/platform.tscn" id="4_nw3us"]
+[ext_resource type="PackedScene" uid="uid://cfpcmbj31aaqw" path="res://components/end_flag.tscn" id="4_o4jys"]
+[ext_resource type="Shader" path="res://shaders/chrom_abb.gdshader" id="4_rqo7c"]
+[ext_resource type="Shader" path="res://shaders/glitch.gdshader" id="5_fu3ql"]
+[ext_resource type="PackedScene" uid="uid://b45kw67medorv" path="res://components/glitch_trigger.tscn" id="7_oy5ek"]
+[ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="8_yjijp"]
+[ext_resource type="Resource" path="res://dialogic/level4intro.dtl" id="9_8do7s"]
+[ext_resource type="PackedScene" uid="uid://bal07flcgeqb0" path="res://components/disable_input.tscn" id="12_253cg"]
+[ext_resource type="Resource" path="res://dialogic/level4???interaction.dtl" id="13_cjoi1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lahlk"]
+atlas = ExtResource("3_8kdcy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv4hj"]
+atlas = ExtResource("3_8kdcy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgy2j"]
+atlas = ExtResource("3_8kdcy")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fypni"]
+atlas = ExtResource("3_8kdcy")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8us3w"]
+atlas = ExtResource("3_8kdcy")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmrh7"]
+atlas = ExtResource("3_8kdcy")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fi66w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lahlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv4hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgy2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fypni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8us3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmrh7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8348n"]
+shader = ExtResource("4_rqo7c")
+shader_parameter/levels = 10
+shader_parameter/spread = 0.03
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_52jtc"]
+shader = ExtResource("5_fu3ql")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.702
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.15
+
+[node name="Level4" type="Node2D"]
+
+[node name="skyCol" type="ColorRect" parent="."]
+offset_left = -3475.0
+offset_top = -7587.0
+offset_right = 13741.0
+offset_bottom = 831.0
+color = Color(0, 0.0823333, 0.19, 1)
+
+[node name="parallax" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 0.9)
+
+[node name="bg" type="Sprite2D" parent="parallax"]
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(5559, -3668.5)
+scale = Vector2(28.8156, 34.0031)
+texture = ExtResource("1_wlbnq")
+metadata/_edit_use_anchors_ = true
+
+[node name="parallax2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 0.3)
+
+[node name="cloud" type="Sprite2D" parent="parallax2"]
+modulate = Color(1, 1, 1, 0.384314)
+position = Vector2(5331, -2953)
+scale = Vector2(29.9062, 24.7187)
+texture = ExtResource("2_md4tl")
+
+[node name="Platform" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(492, -5378)
+
+[node name="Platform2" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(1669, -5338)
+
+[node name="Platform3" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(2614, -5027)
+
+[node name="Platform4" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(3547, -4586)
+
+[node name="Platform5" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(4418, -4213)
+
+[node name="Platform6" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(5357, -3840)
+
+[node name="Platform7" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(6268, -3942)
+
+[node name="Platform8" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(7156, -4242)
+
+[node name="Platform9" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(7940, -3938)
+
+[node name="Platform10" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(8842, -4128)
+
+[node name="Platform11" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(9788, -3887)
+
+[node name="Platform12" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(9217, -3446)
+
+[node name="Platform13" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(8272, -3152)
+
+[node name="Platform14" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(7604, -2954)
+
+[node name="Platform15" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(6863, -2722)
+
+[node name="Platform16" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(6133, -2473)
+
+[node name="Platform17" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(4965, -2519)
+
+[node name="EndFlag" parent="." instance=ExtResource("4_o4jys")]
+position = Vector2(4962, -2807)
+
+[node name="orb" type="AnimatedSprite2D" parent="."]
+position = Vector2(5708, -5000)
+scale = Vector2(35.3125, 35.3125)
+sprite_frames = SubResource("SpriteFrames_fi66w")
+autoplay = "default"
+
+[node name="Player" parent="." instance=ExtResource("3_4ug6n")]
+position = Vector2(477, -5468)
+
+[node name="chromabb" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_8348n")
+offset_left = -747.0
+offset_top = -8773.0
+offset_right = 12245.0
+offset_bottom = -411.0
+
+[node name="glitchSquare" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 767.0
+offset_top = -4679.0
+offset_right = 803.0
+offset_bottom = -4642.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare19" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 6189.0
+offset_top = -2366.0
+offset_right = 6225.0
+offset_bottom = -2329.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare20" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 4689.0
+offset_top = -2362.0
+offset_right = 4725.0
+offset_bottom = -2325.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 1776.0
+offset_top = -5876.0
+offset_right = 1812.0
+offset_bottom = -5839.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare3" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 2063.0
+offset_top = -4387.0
+offset_right = 2099.0
+offset_bottom = -4350.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare4" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 6476.0
+offset_top = -3509.0
+offset_right = 6512.0
+offset_bottom = -3472.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare5" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 3149.0
+offset_top = -4887.0
+offset_right = 3185.0
+offset_bottom = -4850.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare6" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 3943.0
+offset_top = -3602.0
+offset_right = 3979.0
+offset_bottom = -3565.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare7" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 4220.0
+offset_top = -4463.0
+offset_right = 4256.0
+offset_bottom = -4426.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare8" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 5894.0
+offset_top = -4127.0
+offset_right = 5930.0
+offset_bottom = -4090.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare9" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 7206.0
+offset_top = -3649.0
+offset_right = 7242.0
+offset_bottom = -3612.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare21" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 6775.0
+offset_top = -3236.0
+offset_right = 6811.0
+offset_bottom = -3199.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare10" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 6513.0
+offset_top = -5654.0
+offset_right = 6549.0
+offset_bottom = -5617.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare11" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 6513.0
+offset_top = -5654.0
+offset_right = 6549.0
+offset_bottom = -5617.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare12" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 5085.0
+offset_top = -4187.0
+offset_right = 5121.0
+offset_bottom = -4150.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare13" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 7413.0
+offset_top = -4757.0
+offset_right = 7449.0
+offset_bottom = -4720.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare14" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 8489.0
+offset_top = -4697.0
+offset_right = 8525.0
+offset_bottom = -4660.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare15" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 5032.0
+offset_top = -5060.0
+offset_right = 5068.0
+offset_bottom = -5023.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare16" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 7971.0
+offset_top = -3390.0
+offset_right = 8007.0
+offset_bottom = -3353.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare17" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 8731.0
+offset_top = -2863.0
+offset_right = 8767.0
+offset_bottom = -2826.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare18" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 3268.0
+offset_top = -3964.0
+offset_right = 3304.0
+offset_bottom = -3927.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="GlitchTrigger" parent="." instance=ExtResource("7_oy5ek")]
+position = Vector2(1063, -5717)
+scale = Vector2(1, 7.36)
+
+[node name="GlitchTrigger3" parent="." instance=ExtResource("7_oy5ek")]
+position = Vector2(4877, -4599)
+scale = Vector2(1, 7.36)
+duration = 20
+
+[node name="GlitchTrigger4" parent="." instance=ExtResource("7_oy5ek")]
+position = Vector2(6769, -4648)
+scale = Vector2(1, 7.36)
+
+[node name="GlitchTrigger6" parent="." instance=ExtResource("7_oy5ek")]
+position = Vector2(5503, -2728)
+scale = Vector2(1, 7.36)
+
+[node name="DialogueTrigger" parent="." instance=ExtResource("8_yjijp")]
+position = Vector2(487, -5620)
+timeline = ExtResource("9_8do7s")
+
+[node name="DisableInput" parent="." instance=ExtResource("12_253cg")]
+position = Vector2(5360, -4479)
+scale = Vector2(1, 3.08)
+time = 5
+
+[node name="DialogueTrigger2" parent="." instance=ExtResource("8_yjijp")]
+position = Vector2(5349, -4413)
+scale = Vector2(1.11458, 2.82617)
+timeline = ExtResource("13_cjoi1")
+
+[node name="DialogueTrigger3" parent="." instance=ExtResource("8_yjijp")]
+position = Vector2(4975, -2751)

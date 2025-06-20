@@ -17,7 +17,6 @@ func get_kill_status():
 	else: 
 		return false
 
-
 func setSpawn(spawn: Vector2):
 	respawn = spawn
 
@@ -36,3 +35,15 @@ func glitch(duration):
 
 func clear_dialogue():
 	Dialogic.end_timeline()
+
+func fade_to(color):
+	var scene = preload("res://components/fade_to.tscn")
+	var instance = scene.instantiate()
+	instance.color = color
+	get_tree().root.add_child(instance)
+
+func tv_static(duration):
+	var tv_static = preload("res://components/static.tscn").instantiate()
+	get_tree().root.add_child(tv_static)
+	await get_tree().create_timer(duration).timeout
+	tv_static.queue_free()

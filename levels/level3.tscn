@@ -1,3 +1,185 @@
-[gd_scene format=3 uid="uid://82tuljhmxivf"]
+[gd_scene load_steps=17 format=3 uid="uid://82tuljhmxivf"]
+
+[ext_resource type="Texture2D" uid="uid://ck3p1ou575wr4" path="res://sprites/clouds-2.png" id="1_6qo2p"]
+[ext_resource type="Texture2D" uid="uid://lfmgp0vbt5ug" path="res://sprites/clouds.png" id="2_p82im"]
+[ext_resource type="PackedScene" uid="uid://b8stysvvq1cyy" path="res://components/platform.tscn" id="3_72pik"]
+[ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="4_b0567"]
+[ext_resource type="PackedScene" uid="uid://g7rsu4ya7m5j" path="res://components/jump_pad.tscn" id="5_88khe"]
+[ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="6_r6v43"]
+[ext_resource type="Resource" path="res://dialogic/level3.dtl" id="7_5mcfd"]
+[ext_resource type="PackedScene" uid="uid://b45kw67medorv" path="res://components/glitch_trigger.tscn" id="8_krubi"]
+[ext_resource type="Resource" path="res://dialogic/level3system.dtl" id="9_b2tdv"]
+[ext_resource type="PackedScene" uid="uid://bne55qhi4obev" path="res://components/dialogue_clearer.tscn" id="9_rurpq"]
+[ext_resource type="Resource" path="res://dialogic/level3drop.dtl" id="10_4luvg"]
+[ext_resource type="PackedScene" uid="uid://bc2hqrqw8d0oa" path="res://components/lava_platform.tscn" id="11_qsbvp"]
+[ext_resource type="PackedScene" uid="uid://c50in8lqomyea" path="res://components/killbox.tscn" id="12_d2jf3"]
+[ext_resource type="PackedScene" uid="uid://bal07flcgeqb0" path="res://components/disable_input.tscn" id="14_ja8fe"]
+[ext_resource type="Resource" path="res://dialogic/level3postdrop.dtl" id="15_c0k4e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu102"]
+size = Vector2(1816, 258)
 
 [node name="Level3" type="Node2D"]
+
+[node name="skyCol" type="ColorRect" parent="."]
+offset_left = -3475.0
+offset_top = -7587.0
+offset_right = 13741.0
+offset_bottom = 831.0
+color = Color(0.762875, 0.517646, 0.410994, 1)
+
+[node name="skyCol2" type="ColorRect" parent="."]
+offset_left = -1856.0
+offset_top = 401.0
+offset_right = 15360.0
+offset_bottom = 39637.0
+color = Color(0, 0, 0, 1)
+
+[node name="parallax" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 0.9)
+
+[node name="bg" type="Sprite2D" parent="parallax"]
+modulate = Color(1, 1, 1, 0.388235)
+position = Vector2(5127, 202.002)
+scale = Vector2(27.4656, 58.1937)
+texture = ExtResource("1_6qo2p")
+metadata/_edit_use_anchors_ = true
+
+[node name="parallax2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 0.3)
+
+[node name="cloud" type="Sprite2D" parent="parallax2"]
+modulate = Color(1, 1, 1, 0.384314)
+position = Vector2(4747, 1357.5)
+scale = Vector2(28.0812, 51.6594)
+texture = ExtResource("2_p82im")
+
+[node name="parallax3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 0.9)
+scroll_offset = Vector2(1719, 28203)
+
+[node name="bg" type="Sprite2D" parent="parallax3"]
+modulate = Color(1, 1, 1, 0.388235)
+position = Vector2(5127, 202.002)
+scale = Vector2(27.4656, 58.1937)
+texture = ExtResource("1_6qo2p")
+metadata/_edit_use_anchors_ = true
+
+[node name="parallax4" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 0.3)
+scroll_offset = Vector2(1719, 28203)
+
+[node name="cloud" type="Sprite2D" parent="parallax4"]
+modulate = Color(1, 1, 1, 0.384314)
+position = Vector2(5128, 5658)
+scale = Vector2(28.0812, 51.6594)
+texture = ExtResource("2_p82im")
+
+[node name="Platform" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-632, -4667)
+
+[node name="Platform2" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(598, -4711)
+
+[node name="Platform3" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(891, -4232)
+
+[node name="Platform6" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(1267, -3770)
+
+[node name="Platform4" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(1915, -3294)
+
+[node name="Platform5" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(2711, -4524)
+
+[node name="Platform7" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(4057, -4529)
+
+[node name="Platform8" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(4675, -4025)
+
+[node name="Platform10" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(6414, -3592)
+
+[node name="Platform11" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(7765, -4090)
+
+[node name="Platform12" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(9124, -4461)
+
+[node name="Player" parent="." instance=ExtResource("4_b0567")]
+position = Vector2(-640, -4765)
+
+[node name="JumpPad" parent="." instance=ExtResource("5_88khe")]
+position = Vector2(2040, -3375)
+
+[node name="DialogueTrigger" parent="." instance=ExtResource("6_r6v43")]
+position = Vector2(-649, -4911)
+timeline = ExtResource("7_5mcfd")
+
+[node name="GlitchTrigger" parent="." instance=ExtResource("8_krubi")]
+position = Vector2(152, -4827)
+scale = Vector2(1, 13.56)
+
+[node name="GlitchTrigger2" parent="." instance=ExtResource("8_krubi")]
+position = Vector2(3111, -4953)
+scale = Vector2(1, 13.56)
+
+[node name="DialogueTrigger2" parent="." instance=ExtResource("6_r6v43")]
+position = Vector2(3184, -5097)
+scale = Vector2(1, 5.88)
+timeline = ExtResource("9_b2tdv")
+
+[node name="DialogueTrigger3" parent="." instance=ExtResource("6_r6v43")]
+position = Vector2(9118, -4695)
+timeline = ExtResource("10_4luvg")
+
+[node name="DialogueClearer" parent="." instance=ExtResource("9_rurpq")]
+position = Vector2(4253, -4762)
+scale = Vector2(1, 9.03999)
+
+[node name="Platform9" parent="." instance=ExtResource("11_qsbvp")]
+position = Vector2(5366, -3666)
+
+[node name="killbox" parent="." instance=ExtResource("12_d2jf3")]
+position = Vector2(234, -554)
+scale = Vector2(202.444, 52.0427)
+
+[node name="killbox2" parent="." instance=ExtResource("12_d2jf3")]
+position = Vector2(18154, -618)
+scale = Vector2(202.444, 52.0427)
+
+[node name="GlitchTrigger3" parent="." instance=ExtResource("8_krubi")]
+position = Vector2(9283, -1330)
+scale = Vector2(13.96, 10.36)
+duration = 20
+
+[node name="DisableInput" parent="." instance=ExtResource("14_ja8fe")]
+position = Vector2(9259, -1260)
+scale = Vector2(6.67999, 5.4)
+time = 20
+
+[node name="GlitchTrigger4" parent="." instance=ExtResource("8_krubi")]
+position = Vector2(9714, 35684)
+scale = Vector2(13.96, 10.36)
+duration = 20
+
+[node name="DisableInput2" parent="." instance=ExtResource("14_ja8fe")]
+position = Vector2(9690, 35754)
+scale = Vector2(6.67999, 5.4)
+time = 20
+
+[node name="DialogueTrigger4" parent="." instance=ExtResource("6_r6v43")]
+position = Vector2(9239, -1218)
+scale = Vector2(8.84, 4.12)
+timeline = ExtResource("15_c0k4e")
+
+[node name="static" type="StaticBody2D" parent="."]
+position = Vector2(9661, 36595)
+
+[node name="collision" type="CollisionShape2D" parent="static"]
+shape = SubResource("RectangleShape2D_gu102")
+
+[node name="JumpPad2" parent="." instance=ExtResource("5_88khe")]
+position = Vector2(6534, -3674)
