@@ -1,8 +1,12 @@
-???: RΞTURN TØ SΔFΞTY. RΞTURN TØ JØY.
-???: THΞ MØRΞ YØU KΝØW, THΞ MØRΞ YØU BRΞΔK.
-???: YØUR CURIØSITY IS Δ DΞFΞCT.
+[music path="res://audio/Ambience/???_interaction.mp3" fade="0.0" volume="1.0"]
+
+???: [lspeed=0.7] RΞTURN TØ SΔFΞTY. RΞTURN TØ JØY.
+???: [lspeed=0.7] THΞ MØRΞ YØU KΝØW, THΞ MØRΞ YØU BRΞΔK.
+???: [lspeed=0.7] YØUR CURIØSITY IS Δ DΞFΞCT.
+
 do Global.fade_to(1)
 [wait time="5.0"]
+[music fade="0.0" volume="0.0"]
 join NORA center
 NORA: Well, that was strange!
 NORA: Let's get back to our happy little activities, shall we?

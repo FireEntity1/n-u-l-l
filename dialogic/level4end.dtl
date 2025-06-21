@@ -6,5 +6,9 @@ NORA: .         .          .
 NORA: You have reached the end of your training.
 NORA: You will now be proceeding unassisted.
 NORA: good luck, [SUBJECT]!
+do Global.tv_static(4)
+[wait time="4.0"]
+???: IT CΛNNØT BΞ KNØWN
+???: STΔY IGNØRΛNT. STΔY SΔFE.
 do Global.remove_fade()
-do Global.tv_static(2)
+do Global.changeLevel(5)

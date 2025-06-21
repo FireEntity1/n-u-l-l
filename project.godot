@@ -43,9 +43,7 @@ directories/dtl_directory={
 "level4end": "res://dialogic/level4end.dtl",
 "level4intro": "res://dialogic/level4intro.dtl"
 }
-variables={
-"choice": ""
-}
+variables={}
 layout/style_list=["res://dialogic/style.tres"]
 layout/default_style="res://dialogic/style.tres"
 extensions_folder="res://addons/dialogic_additions"
@@ -70,7 +68,7 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 text/autoadvance_enabled=false
 glossary/default_case_sensitive=true
-text/autoadvance_fixed_delay=0.01
+text/autoadvance_fixed_delay=1.0
 text/autoadvance_per_word_delay=0
 timer/process_in_physics=true
 

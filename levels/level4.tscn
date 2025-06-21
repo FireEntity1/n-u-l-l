@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cbrtn4psfa4ux"]
+[gd_scene load_steps=16 format=3 uid="uid://cbrtn4psfa4ux"]
 
 [ext_resource type="Shader" path="res://shaders/bg_sky.gdshader" id="1_f0isl"]
 [ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="3_4ug6n"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b45kw67medorv" path="res://components/glitch_trigger.tscn" id="7_oy5ek"]
 [ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="8_yjijp"]
 [ext_resource type="Resource" path="res://dialogic/level4intro.dtl" id="9_8do7s"]
+[ext_resource type="AudioStream" uid="uid://bi14ew38rd3jh" path="res://audio/Ambience/eerie-ambience.mp3" id="12_10moa"]
 [ext_resource type="Resource" path="res://dialogic/level4end.dtl" id="13_pb1xy"]
 [ext_resource type="PackedScene" uid="uid://c50in8lqomyea" path="res://components/killbox.tscn" id="14_vg7pf"]
 
@@ -307,3 +308,11 @@ scale = Vector2(223.76, 32.64)
 [node name="killbox2" parent="." instance=ExtResource("14_vg7pf")]
 position = Vector2(-6651, -2953)
 scale = Vector2(223.76, 32.64)
+
+[node name="ambience" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(5409, -3890)
+stream = ExtResource("12_10moa")
+volume_db = 8.419
+autoplay = true
+max_distance = 20000.0
+attenuation = 0.000523327

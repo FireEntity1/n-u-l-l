@@ -46,7 +46,7 @@ shader_parameter/noise_texture = SubResource("NoiseTexture2D_4p18a")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xxo74"]
 shader = ExtResource("3_npk6f")
-shader_parameter/pixel_size = 8
+shader_parameter/pixel_size = 16
 shader_parameter/screen_size = Vector2(1920, 1080)
 
 [node name="Level5" type="Node2D"]
@@ -82,3 +82,12 @@ position = Vector2(7247, -7293)
 
 [node name="Platform5" parent="." instance=ExtResource("4_6ogdg")]
 position = Vector2(8178, -7553)
+
+[node name="Platform6" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(9158, -7315)
+
+[node name="Platform7" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(10155, -7139)
+
+[node name="Platform8" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(11097, -7426)
