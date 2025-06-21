@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdhki8ic5ipib"]
+
+[ext_resource type="Shader" path="res://shaders/bg.gdshader" id="1_t7ype"]
+[ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="3_8nxtr"]
+[ext_resource type="Shader" path="res://shaders/pixel.gdshader" id="3_npk6f"]
+[ext_resource type="PackedScene" uid="uid://1bo16nmheked" path="res://components/platform-2.tscn" id="4_6ogdg"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_7uv1i"]
+noise_type = 4
+fractal_type = 3
+fractal_octaves = 10
+fractal_lacunarity = 1.42
+fractal_gain = 2.71
+fractal_weighted_strength = 1.0
+fractal_ping_pong_strength = 0.925
+domain_warp_enabled = true
+domain_warp_fractal_type = 2
+domain_warp_fractal_gain = 4.19
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4p18a"]
+width = 32
+height = 32
+noise = SubResource("FastNoiseLite_7uv1i")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hx80e"]
+shader = ExtResource("1_t7ype")
+shader_parameter/stars_on = true
+shader_parameter/stars_flicker = true
+shader_parameter/timeScaleFactor = 0.04
+shader_parameter/colour_muiltiplier = Color(1, 1, 1, 1)
+shader_parameter/colour_muiltiplier2 = Color(1, 1, 1, 1)
+shader_parameter/brightness = 1.318
+shader_parameter/clouds_resolution = 10.0
+shader_parameter/clouds_intesity = 0.0
+shader_parameter/waveyness = 0.5
+shader_parameter/fragmentation = 7.0
+shader_parameter/distortion = 1.5
+shader_parameter/clouds_alpha = 0.5
+shader_parameter/movement = 1.833
+shader_parameter/blur = 1.569
+shader_parameter/blur2 = 0.01
+shader_parameter/bg_speed = 0.1
+shader_parameter/mid_speed = 0.5
+shader_parameter/fg_speed = 1.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_4p18a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xxo74"]
+shader = ExtResource("3_npk6f")
+shader_parameter/pixel_size = 8
+shader_parameter/screen_size = Vector2(1920, 1080)
+
+[node name="Level5" type="Node2D"]
+
+[node name="bg" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_hx80e")
+offset_left = -432.0
+offset_top = -11698.0
+offset_right = 20607.0
+offset_bottom = 1794.0
+
+[node name="bgPixeller" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_xxo74")
+offset_left = -955.0
+offset_top = -12433.0
+offset_right = 21984.0
+offset_bottom = 2175.0
+
+[node name="Player" parent="." instance=ExtResource("3_8nxtr")]
+position = Vector2(3840, -7587)
+
+[node name="Platform" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(3831, -7417)
+
+[node name="Platform2" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(4927, -7181)
+
+[node name="Platform3" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(6091, -6844)
+
+[node name="Platform4" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(7247, -7293)
+
+[node name="Platform5" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(8178, -7553)

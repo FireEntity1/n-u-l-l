@@ -1,4 +1,3 @@
-SYSTEM: [WARNING] ΔCCΞSS BRΞΔCH DΞTΞCTΞD.
 ???: RΞTURN TØ SΔFΞTY. RΞTURN TØ JØY.
 ???: THΞ MØRΞ YØU KΝØW, THΞ MØRΞ YØU BRΞΔK.
 ???: YØUR CURIØSITY IS Δ DΞFΞCT.
@@ -9,6 +8,7 @@ NORA: Well, that was strange!
 NORA: Let's get back to our happy little activities, shall we?
 NORA: .       .       .      .
 [sound path="res://audio/sfx/glitch.mp3" volume="0.0"]
+SYSTEM: [WARNING] ΔCCΞSS BRΞΔCH DΞTΞCTΞD.
 [wait time="1.0"]
 SYSTEM: [REBOOTING]
 do Global.tv_static(1)

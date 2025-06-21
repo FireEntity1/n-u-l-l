@@ -1,3 +1,10 @@
 do Global.fade_to(1)
-[wait time="2.0"]
-???: <Empty Text Event>
+[wait time="3.0"]
+NORA: Congratulations on finishing your task!
+NORA: .         .          .
+NORA: .         .          .
+NORA: You have reached the end of your training.
+NORA: You will now be proceeding unassisted.
+NORA: good luck, [SUBJECT]!
+do Global.remove_fade()
+do Global.tv_static(2)

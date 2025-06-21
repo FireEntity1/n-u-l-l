@@ -18,7 +18,7 @@ var canDash = true
 
 func _ready():
 	$particles.emitting = true
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.5).timeout
 	$particles.emitting = false
 
 func _physics_process(delta):

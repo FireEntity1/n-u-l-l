@@ -10,6 +10,11 @@ shader_parameter/amount = 20.0
 
 [node name="layer" type="CanvasLayer" parent="."]
 
+[node name="rect2" type="ColorRect" parent="layer"]
+offset_right = 1937.0
+offset_bottom = 1091.0
+color = Color(0.103744, 0.103744, 0.103744, 1)
+
 [node name="rect" type="ColorRect" parent="layer"]
 material = SubResource("ShaderMaterial_3sauy")
 offset_right = 1944.0

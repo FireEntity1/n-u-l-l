@@ -2,4 +2,5 @@ join NORA center
 NORA: Good job! You made it through
 do Global.glitch(0.2)
 NORA: ␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀
+do Global.tv_static(1)
 do Global.changeLevel(3)

@@ -1,4 +1,5 @@
 join NORA center
 NORA: Congratulations --SUBJECT--!
 NORA: Let's try a harder challenge now.
+do Global.tv_static(1)
 do Global.changeLevel(2)

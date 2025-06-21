@@ -1,7 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://duepu4u3p5ux2"]
 
-[ext_resource type="Texture2D" uid="uid://ck3p1ou575wr4" path="res://sprites/clouds-2.png" id="1_wkm6j"]
-[ext_resource type="Texture2D" uid="uid://lfmgp0vbt5ug" path="res://sprites/clouds.png" id="2_bdq6i"]
+[ext_resource type="Shader" path="res://shaders/bg_sky.gdshader" id="1_d6dwi"]
 [ext_resource type="PackedScene" uid="uid://cfpcmbj31aaqw" path="res://components/end_flag.tscn" id="2_cpa2l"]
 [ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="2_h4spq"]
 [ext_resource type="PackedScene" uid="uid://b8stysvvq1cyy" path="res://components/platform.tscn" id="3_ca6ur"]
@@ -15,33 +14,28 @@
 [ext_resource type="Resource" path="res://dialogic/level2end.dtl" id="12_wvrdc"]
 [ext_resource type="PackedScene" uid="uid://g7rsu4ya7m5j" path="res://components/jump_pad.tscn" id="13_1kujh"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jfayr"]
+shader = ExtResource("1_d6dwi")
+shader_parameter/sky_color_top = Color(0.4, 0.7, 1, 1)
+shader_parameter/sky_color_bottom = Color(0.8, 0.9, 1, 1)
+shader_parameter/cloud_color = Color(0.907942, 0.907942, 0.907942, 1)
+shader_parameter/cloud_coverage = 0.636
+shader_parameter/cloud_speed = 0.15
+shader_parameter/cloud_scale = 100.0
+shader_parameter/pixelation = 126.18
+
 [node name="l2" type="Node2D"]
 
-[node name="skyCol" type="ColorRect" parent="."]
-offset_left = -3475.0
-offset_top = -7587.0
-offset_right = 13741.0
-offset_bottom = 831.0
-color = Color(0.3649, 0.592443, 0.89, 1)
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 0.7)
 
-[node name="parallax" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.7, 0.9)
-
-[node name="bg" type="Sprite2D" parent="parallax"]
-modulate = Color(1, 1, 1, 0.388235)
-position = Vector2(5127, -3668.5)
-scale = Vector2(27.4656, 34.0031)
-texture = ExtResource("1_wkm6j")
+[node name="bg" type="ColorRect" parent="Parallax2D"]
+material = SubResource("ShaderMaterial_jfayr")
+offset_left = -3815.0
+offset_top = -9989.0
+offset_right = 16336.0
+offset_bottom = 4571.0
 metadata/_edit_use_anchors_ = true
-
-[node name="parallax2" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.4, 0.3)
-
-[node name="cloud" type="Sprite2D" parent="parallax2"]
-modulate = Color(1, 1, 1, 0.384314)
-position = Vector2(4747, -2953)
-scale = Vector2(28.0812, 24.7187)
-texture = ExtResource("2_bdq6i")
 
 [node name="EndFlag" parent="." instance=ExtResource("2_cpa2l")]
 position = Vector2(10174, -2254)

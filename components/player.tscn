@@ -1,16 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dav5twmuvn8o0"]
+[gd_scene load_steps=5 format=3 uid="uid://dav5twmuvn8o0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ytl57"]
 [ext_resource type="Texture2D" uid="uid://uk4r5icpm5js" path="res://sprites/player.png" id="2_2a4mc"]
-[ext_resource type="Shader" path="res://shaders/motionblur.gdshader" id="2_iv0wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yaalc"]
 size = Vector2(38, 32)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_eby8u"]
-shader = ExtResource("2_iv0wf")
-shader_parameter/dir = Vector2(0, 0)
-shader_parameter/quality = 2
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qsg7g"]
 particle_flag_disable_z = true
@@ -34,7 +28,6 @@ position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_yaalc")
 
 [node name="sprite" type="Sprite2D" parent="character"]
-material = SubResource("ShaderMaterial_eby8u")
 position = Vector2(1, -1)
 scale = Vector2(1.25, 1.1)
 texture = ExtResource("2_2a4mc")
@@ -49,7 +42,7 @@ rotation_smoothing_enabled = true
 wait_time = 0.1
 
 [node name="dashCool" type="Timer" parent="character"]
-wait_time = 0.2
+wait_time = 0.15
 
 [node name="particles" type="GPUParticles2D" parent="character"]
 emitting = false
