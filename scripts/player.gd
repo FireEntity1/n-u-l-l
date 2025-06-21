@@ -103,3 +103,6 @@ func stop_input(time):
 	can_input = false
 	await get_tree().create_timer(time).timeout
 	can_input = true
+
+func teleport(coordinates: Vector2):
+	position = coordinates

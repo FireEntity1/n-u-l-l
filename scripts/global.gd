@@ -2,6 +2,9 @@ extends Node
 
 var killed = false
 
+var faded = false
+var fadeNode
+
 var respawn = Vector2(0,0)
 
 func _ready():
@@ -37,13 +40,20 @@ func clear_dialogue():
 	Dialogic.end_timeline()
 
 func fade_to(color):
+	faded = true
 	var scene = preload("res://components/fade_to.tscn")
-	var instance = scene.instantiate()
-	instance.color = color
-	get_tree().root.add_child(instance)
+	fadeNode = scene.instantiate()
+	fadeNode.color = color
+	get_tree().root.add_child(fadeNode)
+
+func remove_fade():
+	fadeNode.queue_free()
 
 func tv_static(duration):
 	var tv_static = preload("res://components/static.tscn").instantiate()
 	get_tree().root.add_child(tv_static)
 	await get_tree().create_timer(duration).timeout
 	tv_static.queue_free()
+
+func teleport_player(x,y):
+	pass

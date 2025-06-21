@@ -12,4 +12,5 @@ NORA: .       .       .      .
 [wait time="1.0"]
 SYSTEM: [REBOOTING]
 do Global.tv_static(1)
+do Global.remove_fade()
 do Global.changeLevel(4)

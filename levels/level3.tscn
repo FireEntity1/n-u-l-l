@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://82tuljhmxivf"]
+[gd_scene load_steps=30 format=3 uid="uid://82tuljhmxivf"]
 
 [ext_resource type="Texture2D" uid="uid://ck3p1ou575wr4" path="res://sprites/clouds-2.png" id="1_6qo2p"]
 [ext_resource type="Texture2D" uid="uid://lfmgp0vbt5ug" path="res://sprites/clouds.png" id="2_p82im"]
@@ -15,9 +15,76 @@
 [ext_resource type="PackedScene" uid="uid://c50in8lqomyea" path="res://components/killbox.tscn" id="12_d2jf3"]
 [ext_resource type="PackedScene" uid="uid://bal07flcgeqb0" path="res://components/disable_input.tscn" id="14_ja8fe"]
 [ext_resource type="Resource" path="res://dialogic/level3postdrop.dtl" id="15_c0k4e"]
+[ext_resource type="Texture2D" uid="uid://c204vlx72ch2o" path="res://sprites/orb.png" id="16_u738e"]
+[ext_resource type="Shader" path="res://shaders/glitch.gdshader" id="16_yl101"]
+[ext_resource type="Shader" path="res://shaders/chrom_abb.gdshader" id="18_t68dq"]
+[ext_resource type="PackedScene" uid="uid://ma52vx2eodb4" path="res://components/teleporter.tscn" id="19_1kwv0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gu102"]
 size = Vector2(1816, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lahlk"]
+atlas = ExtResource("16_u738e")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv4hj"]
+atlas = ExtResource("16_u738e")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgy2j"]
+atlas = ExtResource("16_u738e")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fypni"]
+atlas = ExtResource("16_u738e")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8us3w"]
+atlas = ExtResource("16_u738e")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmrh7"]
+atlas = ExtResource("16_u738e")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cd883"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lahlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv4hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgy2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fypni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8us3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmrh7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_56ruk"]
+shader = ExtResource("16_yl101")
+shader_parameter/shake_power = 0.09
+shader_parameter/shake_rate = 1.0
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lulx3"]
+shader = ExtResource("18_t68dq")
+shader_parameter/levels = 50
+shader_parameter/spread = 0.5
 
 [node name="Level3" type="Node2D"]
 
@@ -109,7 +176,7 @@ position = Vector2(7765, -4090)
 position = Vector2(9124, -4461)
 
 [node name="Player" parent="." instance=ExtResource("4_b0567")]
-position = Vector2(-640, -4765)
+position = Vector2(-649, -4764)
 
 [node name="JumpPad" parent="." instance=ExtResource("5_88khe")]
 position = Vector2(2040, -3375)
@@ -150,20 +217,10 @@ scale = Vector2(202.444, 52.0427)
 position = Vector2(18154, -618)
 scale = Vector2(202.444, 52.0427)
 
-[node name="GlitchTrigger3" parent="." instance=ExtResource("8_krubi")]
-position = Vector2(9283, -1330)
-scale = Vector2(13.96, 10.36)
-duration = 20
-
 [node name="DisableInput" parent="." instance=ExtResource("14_ja8fe")]
 position = Vector2(9259, -1260)
 scale = Vector2(6.67999, 5.4)
 time = 20
-
-[node name="GlitchTrigger4" parent="." instance=ExtResource("8_krubi")]
-position = Vector2(9714, 35684)
-scale = Vector2(13.96, 10.36)
-duration = 20
 
 [node name="DisableInput2" parent="." instance=ExtResource("14_ja8fe")]
 position = Vector2(9690, 35754)
@@ -171,7 +228,7 @@ scale = Vector2(6.67999, 5.4)
 time = 20
 
 [node name="DialogueTrigger4" parent="." instance=ExtResource("6_r6v43")]
-position = Vector2(9239, -1218)
+position = Vector2(9239, 28702)
 scale = Vector2(8.84, 4.12)
 timeline = ExtResource("15_c0k4e")
 
@@ -183,3 +240,38 @@ shape = SubResource("RectangleShape2D_gu102")
 
 [node name="JumpPad2" parent="." instance=ExtResource("5_88khe")]
 position = Vector2(6534, -3674)
+
+[node name="orb" type="AnimatedSprite2D" parent="."]
+position = Vector2(9705, 36066)
+scale = Vector2(17.9594, -18.8089)
+sprite_frames = SubResource("SpriteFrames_cd883")
+autoplay = "default"
+
+[node name="glitchSquare" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_56ruk")
+offset_left = 5703.0
+offset_top = 32733.0
+offset_right = 6179.0
+offset_bottom = 34774.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_56ruk")
+offset_left = 5129.0
+offset_top = 38593.0
+offset_right = 5730.0
+offset_bottom = 38935.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="abberation" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_lulx3")
+offset_left = 6393.0
+offset_top = 34789.0
+offset_right = 13027.0
+offset_bottom = 37904.0
+color = Color(1, 1, 1, 0.717647)
+
+[node name="Teleporter" parent="." instance=ExtResource("19_1kwv0")]
+position = Vector2(9261, 6049)
+scale = Vector2(7.829, 3.47612)
+coordinates = Vector2(10354, 10000)
