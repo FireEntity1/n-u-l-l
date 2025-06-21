@@ -106,6 +106,14 @@ position = Vector2(4962, -2807)
 [node name="Player" parent="." instance=ExtResource("3_4ug6n")]
 position = Vector2(477, -5468)
 
+[node name="ambience" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(4932, 1578)
+stream = ExtResource("12_10moa")
+volume_db = 8.419
+autoplay = true
+max_distance = 20000.0
+attenuation = 0.000523327
+
 [node name="chromabb" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_8348n")
 offset_left = -747.0
@@ -308,11 +316,3 @@ scale = Vector2(223.76, 32.64)
 [node name="killbox2" parent="." instance=ExtResource("14_vg7pf")]
 position = Vector2(-6651, -2953)
 scale = Vector2(223.76, 32.64)
-
-[node name="ambience" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(5409, -3890)
-stream = ExtResource("12_10moa")
-volume_db = 8.419
-autoplay = true
-max_distance = 20000.0
-attenuation = 0.000523327

@@ -6,11 +6,11 @@
 "custom_info": {
 "sound_mood_default": "Mood 1",
 "sound_moods": {
-"Mood 1": {
+"default": {
 "mode": 0,
-"name": "Mood 1",
-"pitch_base": -2.0,
-"pitch_variance": -4.0,
+"name": "default",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
 "skip_characters": 0.0,
 "sound_path": "res://audio/sfx/type-blip.wav",
 "volume_base": 0.0,

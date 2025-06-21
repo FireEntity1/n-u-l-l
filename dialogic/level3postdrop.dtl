@@ -1,8 +1,8 @@
 [music path="res://audio/Ambience/???_interaction.mp3" fade="0.0" volume="1.0"]
 
-???: [lspeed=0.7] RΞTURN TØ SΔFΞTY. RΞTURN TØ JØY.
-???: [lspeed=0.7] THΞ MØRΞ YØU KΝØW, THΞ MØRΞ YØU BRΞΔK.
-???: [lspeed=0.7] YØUR CURIØSITY IS Δ DΞFΞCT.
+???: [speed=5.5] RΞTURN TØ SΔFΞTY. RΞTURN TØ JØY.
+???: [speed=5.5] THΞ MØRΞ YØU KΝØW, THΞ MØRΞ YØU BRΞΔK.
+???: [speed=5.5] YØUR CURIØSITY IS Δ DΞFΞCT.
 
 do Global.fade_to(1)
 [wait time="5.0"]
