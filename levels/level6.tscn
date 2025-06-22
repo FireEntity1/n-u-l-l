@@ -1,0 +1,118 @@
+[gd_scene load_steps=17 format=3 uid="uid://dd0urxb11kyx4"]
+
+[ext_resource type="Texture2D" uid="uid://c204vlx72ch2o" path="res://sprites/orb.png" id="1_rnmon"]
+[ext_resource type="Shader" path="res://shaders/glitch.gdshader" id="2_f1mpj"]
+[ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="2_twndj"]
+[ext_resource type="Shader" path="res://shaders/chrom_abb.gdshader" id="3_4yj67"]
+[ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="5_6xhx5"]
+[ext_resource type="Resource" path="res://dialogic/level6confrontation.dtl" id="6_ne034"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odylq"]
+size = Vector2(1816, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lahlk"]
+atlas = ExtResource("1_rnmon")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv4hj"]
+atlas = ExtResource("1_rnmon")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgy2j"]
+atlas = ExtResource("1_rnmon")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fypni"]
+atlas = ExtResource("1_rnmon")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8us3w"]
+atlas = ExtResource("1_rnmon")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmrh7"]
+atlas = ExtResource("1_rnmon")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8wy2a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lahlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv4hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgy2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fypni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8us3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmrh7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3vqev"]
+shader = ExtResource("2_f1mpj")
+shader_parameter/shake_power = 0.09
+shader_parameter/shake_rate = 1.0
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ff8kd"]
+shader = ExtResource("3_4yj67")
+shader_parameter/levels = 50
+shader_parameter/spread = 0.5
+
+[node name="Level6" type="Node2D"]
+
+[node name="rect" type="ColorRect" parent="."]
+offset_left = -5442.0
+offset_top = -2313.0
+offset_right = 5506.0
+offset_bottom = 4295.0
+color = Color(0, 0, 0, 1)
+
+[node name="static" type="StaticBody2D" parent="."]
+position = Vector2(-5, 1535.59)
+
+[node name="collision" type="CollisionShape2D" parent="static"]
+shape = SubResource("RectangleShape2D_odylq")
+
+[node name="orb" type="AnimatedSprite2D" parent="."]
+position = Vector2(39, 1006.59)
+scale = Vector2(17.9594, -18.8089)
+sprite_frames = SubResource("SpriteFrames_8wy2a")
+autoplay = "default"
+
+[node name="Player" parent="." instance=ExtResource("2_twndj")]
+position = Vector2(35, 1380)
+
+[node name="glitchSquare2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_3vqev")
+offset_left = -4537.0
+offset_top = 3533.6
+offset_right = -3936.0
+offset_bottom = 3875.6
+scale = Vector2(15.4829, -16.2152)
+
+[node name="abberation" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ff8kd")
+offset_left = -3273.0
+offset_top = -270.405
+offset_right = 3361.0
+offset_bottom = 2844.59
+color = Color(1, 1, 1, 0.717647)
+
+[node name="DialogueTrigger" parent="." instance=ExtResource("5_6xhx5")]
+position = Vector2(20, 1314)
+timeline = ExtResource("6_ne034")

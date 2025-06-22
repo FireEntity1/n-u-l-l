@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cdhki8ic5ipib"]
+[gd_scene load_steps=29 format=3 uid="uid://cdhki8ic5ipib"]
 
 [ext_resource type="Shader" path="res://shaders/bg.gdshader" id="1_t7ype"]
 [ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="3_8nxtr"]
@@ -8,6 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://bdbqtdgww8ghj" path="res://audio/Ambience/eerie-melody.mp3" id="5_el0q0"]
 [ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="7_8xqvx"]
 [ext_resource type="Resource" path="res://dialogic/level5loredrop.dtl" id="8_ukuyc"]
+[ext_resource type="Texture2D" uid="uid://clv7331ho32oh" path="res://sprites/logs-orb.png" id="9_e41np"]
+[ext_resource type="PackedScene" uid="uid://c50in8lqomyea" path="res://components/killbox.tscn" id="10_ik3et"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_7uv1i"]
 noise_type = 4
@@ -103,6 +105,56 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_r07gv"]
+atlas = ExtResource("9_e41np")
+region = Rect2(0, 0, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd408"]
+atlas = ExtResource("9_e41np")
+region = Rect2(32, 0, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eidos"]
+atlas = ExtResource("9_e41np")
+region = Rect2(64, 0, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm8b6"]
+atlas = ExtResource("9_e41np")
+region = Rect2(96, 0, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xi0b"]
+atlas = ExtResource("9_e41np")
+region = Rect2(128, 0, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gadmi"]
+atlas = ExtResource("9_e41np")
+region = Rect2(160, 0, 32, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ysb8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r07gv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd408")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eidos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qm8b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xi0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gadmi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level5" type="Node2D"]
 
 [node name="bg" type="ColorRect" parent="."]
@@ -178,5 +230,15 @@ position = Vector2(13050, -7118)
 position = Vector2(14189, -6932)
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("7_8xqvx")]
-position = Vector2(3832, -7683)
+position = Vector2(14197, -7208.88)
 timeline = ExtResource("8_ukuyc")
+
+[node name="orb-logs" type="AnimatedSprite2D" parent="."]
+position = Vector2(14197, -7197.88)
+scale = Vector2(6.625, 6.625)
+sprite_frames = SubResource("SpriteFrames_ysb8c")
+autoplay = "default"
+
+[node name="killbox" parent="." instance=ExtResource("10_ik3et")]
+position = Vector2(7993, -2460)
+scale = Vector2(364.801, 99.0909)
