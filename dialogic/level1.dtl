@@ -1,6 +1,6 @@
 [style name="style"]
 join NORA center
-NORA: Welcome --SUBJECT--! \
+NORA: Welcome [SUBJECT]! \
 (X or ENTER)
 NORA: I'm NORA, the Nexus Operations and Reality Assistant!
 NORA: I'm here to help you thrive forever!

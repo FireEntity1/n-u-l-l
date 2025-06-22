@@ -25,7 +25,8 @@ Global="*res://scripts/global.gd"
 directories/dch_directory={
 "???": "res://dialogic/???.dch",
 "NORA": "res://dialogic/NORA.dch",
-"SYSTEM": "res://dialogic/SYSTEM.dch"
+"SYSTEM": "res://dialogic/SYSTEM.dch",
+"data_log": "res://dialogic/data_log.dch"
 }
 directories/dtl_directory={
 "level1": "res://dialogic/level1.dtl",
@@ -41,7 +42,8 @@ directories/dtl_directory={
 "level3system": "res://dialogic/level3system.dtl",
 "level4???interaction": "res://dialogic/level4???interaction.dtl",
 "level4end": "res://dialogic/level4end.dtl",
-"level4intro": "res://dialogic/level4intro.dtl"
+"level4intro": "res://dialogic/level4intro.dtl",
+"level5loredrop": "res://dialogic/level5loredrop.dtl"
 }
 variables={}
 layout/style_list=["res://dialogic/style.tres"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdhki8ic5ipib"]
+[gd_scene load_steps=20 format=3 uid="uid://cdhki8ic5ipib"]
 
 [ext_resource type="Shader" path="res://shaders/bg.gdshader" id="1_t7ype"]
 [ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="3_8nxtr"]
@@ -6,6 +6,8 @@
 [ext_resource type="Shader" path="res://shaders/pixel.gdshader" id="3_npk6f"]
 [ext_resource type="PackedScene" uid="uid://1bo16nmheked" path="res://components/platform-2.tscn" id="4_6ogdg"]
 [ext_resource type="AudioStream" uid="uid://bdbqtdgww8ghj" path="res://audio/Ambience/eerie-melody.mp3" id="5_el0q0"]
+[ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="7_8xqvx"]
+[ext_resource type="Resource" path="res://dialogic/level5loredrop.dtl" id="8_ukuyc"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_7uv1i"]
 noise_type = 4
@@ -152,7 +154,7 @@ position = Vector2(4927, -7181)
 position = Vector2(6091, -6844)
 
 [node name="Platform4" parent="." instance=ExtResource("4_6ogdg")]
-position = Vector2(7247, -7293)
+position = Vector2(7107, -7221)
 
 [node name="Platform5" parent="." instance=ExtResource("4_6ogdg")]
 position = Vector2(8178, -7553)
@@ -170,4 +172,11 @@ position = Vector2(11097, -7426)
 position = Vector2(12009, -6970)
 
 [node name="Platform10" parent="." instance=ExtResource("4_6ogdg")]
-position = Vector2(13569, -7239)
+position = Vector2(13050, -7118)
+
+[node name="Platform11" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(14189, -6932)
+
+[node name="DialogueTrigger" parent="." instance=ExtResource("7_8xqvx")]
+position = Vector2(3832, -7683)
+timeline = ExtResource("8_ukuyc")

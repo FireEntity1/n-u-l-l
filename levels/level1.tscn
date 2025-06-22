@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0vkrjuc1dpve"]
+[gd_scene load_steps=12 format=3 uid="uid://b0vkrjuc1dpve"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_178lb"]
 [ext_resource type="PackedScene" uid="uid://b8stysvvq1cyy" path="res://components/platform.tscn" id="2_ajspr"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" path="res://dialogic/level1.dtl" id="6_lbf0e"]
 [ext_resource type="Resource" path="res://dialogic/level1end.dtl" id="7_xx0x8"]
 [ext_resource type="PackedScene" uid="uid://cfpcmbj31aaqw" path="res://components/end_flag.tscn" id="9_bfm2e"]
+[ext_resource type="AudioStream" uid="uid://lvecu3pye84" path="res://audio/Ambience/piano-happy.mp3" id="10_qii45"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_11i45"]
 shader = ExtResource("2_o4iki")
@@ -114,6 +115,14 @@ timeline = ExtResource("7_xx0x8")
 
 [node name="EndFlag" parent="." instance=ExtResource("9_bfm2e")]
 position = Vector2(11186, -3738)
+
+[node name="song" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-370, -57)
+stream = ExtResource("10_qii45")
+autoplay = true
+max_distance = 20000.0
+attenuation = 1e-05
+panning_strength = 0.0
 
 [node name="Player" parent="." instance=ExtResource("3_os2vn")]
 position = Vector2(-370, -57)
