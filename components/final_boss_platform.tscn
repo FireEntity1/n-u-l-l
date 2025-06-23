@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg5bv6bbaw3b1"]
+
+[ext_resource type="Texture2D" uid="uid://dbnlaxmu4g06b" path="res://sprites/final_boss_platform.png" id="1_aqt3l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bu313"]
+atlas = ExtResource("1_aqt3l")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h40q1"]
+atlas = ExtResource("1_aqt3l")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xye8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu313")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h40q1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86iw5"]
+size = Vector2(378, 44)
+
+[node name="FinalBossPlatform" type="Node2D"]
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(9.5, 9.5)
+sprite_frames = SubResource("SpriteFrames_xye8n")
+autoplay = "default"
+frame_progress = 0.879943
+
+[node name="staticbody" type="StaticBody2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="staticbody"]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_86iw5")

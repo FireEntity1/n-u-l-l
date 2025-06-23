@@ -5,6 +5,8 @@ var killed = false
 var faded = false
 var fadeNode
 
+var playerCamera = true
+
 var respawn = Vector2(0,0)
 
 func _ready():
@@ -57,3 +59,9 @@ func tv_static(duration):
 
 func teleport_player(x,y):
 	pass
+
+func disable_camera():
+	playerCamera = false
+
+func get_camera_mode():
+	return playerCamera

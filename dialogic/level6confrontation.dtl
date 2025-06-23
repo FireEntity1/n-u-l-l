@@ -11,3 +11,8 @@
 ???: [speed=5.5] NØT[speed=12]... [speed=10]DANGΞRØUS.
 ???: [speed=9] I . . . CΛNNØT LΞT YØU GØ. . .
 SYSTEM: SUPPRΞSSIØN PRØTOCOL\: ΞNGΔGΞD.
+do Global.glitch(0.3)
+[wait time="2.0"]
+do Global.glitch(0.8)
+do Global.tv_static(3)
+do Global.changeLevel(7)

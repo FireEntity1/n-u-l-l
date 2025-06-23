@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -900.0
 var gravity = 1600
 var slammed = false
 
+var hits
+
 var reset = false # death
 
 var jumps = 2
@@ -20,6 +22,10 @@ func _ready():
 	$particles.emitting = true
 	await get_tree().create_timer(0.5).timeout
 	$particles.emitting = false
+	hits = 0
+	$camera.enabled = true
+	if not Global.get_camera_mode():
+		$camera.enabled = false
 
 func _physics_process(delta):
 	var direction = Input.get_axis("left", "right")
@@ -106,3 +112,6 @@ func stop_input(time):
 
 func teleport(coordinates: Vector2):
 	position = coordinates
+
+func hit_ball():
+	pass
