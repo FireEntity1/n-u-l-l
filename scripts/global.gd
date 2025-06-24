@@ -5,7 +5,11 @@ var killed = false
 var faded = false
 var fadeNode
 
+var aberration = 0.02
+
 var playerCamera = true
+
+var player_pos = Vector2(0,0)
 
 var respawn = Vector2(0,0)
 
@@ -65,3 +69,13 @@ func disable_camera():
 
 func get_camera_mode():
 	return playerCamera
+
+func get_player_pos():
+	return player_pos
+
+func set_player_pos(position: Vector2):
+	player_pos = position
+
+func setAberration(value):
+	aberration = value
+	print(aberration)

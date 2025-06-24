@@ -7,7 +7,7 @@ const JUMP_VELOCITY = -900.0
 var gravity = 1600
 var slammed = false
 
-var hits
+var hits = 1
 
 var reset = false # death
 
@@ -29,6 +29,8 @@ func _ready():
 
 func _physics_process(delta):
 	var direction = Input.get_axis("left", "right")
+	
+	Global.set_player_pos(self.position)
 	
 	if is_on_floor():
 		jumps = 2
@@ -114,4 +116,7 @@ func teleport(coordinates: Vector2):
 	position = coordinates
 
 func hit_ball():
-	pass
+	hits += 1
+	Global.setAberration(hits/10)
+	
+	Global.glitch(1)

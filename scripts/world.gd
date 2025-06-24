@@ -5,6 +5,4 @@ func _ready():
 	
 	if scene == "l7":
 		Global.disable_camera()
-
-func _process(delta):
-	pass
+		$Dialogic/DialogicAutoAdvance.enabled = true

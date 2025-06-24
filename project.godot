@@ -75,6 +75,7 @@ glossary/default_case_sensitive=true
 text/autoadvance_fixed_delay=1.0
 text/autoadvance_per_word_delay=0
 timer/process_in_physics=true
+text/autoskip_time_per_event=1.0
 
 [display]
 

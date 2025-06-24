@@ -13,8 +13,8 @@
 "pitch_variance": 0.0,
 "skip_characters": 0.0,
 "sound_path": "res://audio/sfx/type-blip.wav",
-"volume_base": 0.0,
-"volume_variance": 0.0
+"volume_base": -1.0,
+"volume_variance": -1.0
 }
 },
 "style": ""

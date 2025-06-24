@@ -4,18 +4,26 @@
 [ext_resource type="Script" path="res://scripts/attack_ball.gd" id="1_hmoyn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_407rc"]
-radius = 76.531
+radius = 9.0
 
 [node name="AttackBall" type="Node2D"]
+
+[node name="body" type="CharacterBody2D" parent="."]
+motion_mode = 1
 script = ExtResource("1_hmoyn")
 
-[node name="sprite" type="Sprite2D" parent="."]
-scale = Vector2(10.0625, 10.0625)
+[node name="sprite" type="Sprite2D" parent="body"]
+scale = Vector2(1.125, 1.125)
 texture = ExtResource("1_gnst7")
 
-[node name="area" type="Area2D" parent="."]
+[node name="area" type="Area2D" parent="body"]
 
-[node name="collision" type="CollisionShape2D" parent="area"]
+[node name="collision" type="CollisionShape2D" parent="body/area"]
 shape = SubResource("CircleShape2D_407rc")
 
-[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
+[node name="initialHoming" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="body_entered" from="body/area" to="body" method="_on_area_body_entered"]
+[connection signal="timeout" from="initialHoming" to="body" method="_on_initial_homing_timeout"]

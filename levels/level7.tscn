@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dtrevaib0imo8"]
+[gd_scene load_steps=24 format=3 uid="uid://dtrevaib0imo8"]
 
 [ext_resource type="Shader" path="res://shaders/balatro_style_background.gdshader" id="1_0o8ep"]
 [ext_resource type="Script" path="res://scripts/bossfight.gd" id="1_lllpe"]
@@ -8,6 +8,8 @@
 [ext_resource type="Shader" path="res://shaders/chrom_abb.gdshader" id="3_4cm2w"]
 [ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="4_p0rry"]
 [ext_resource type="Resource" path="res://dialogic/level7bossintro.dtl" id="7_oheaj"]
+[ext_resource type="PackedScene" uid="uid://c50in8lqomyea" path="res://components/killbox.tscn" id="9_wnyy2"]
+[ext_resource type="AudioStream" uid="uid://dt2daa287w3tk" path="res://audio/Ambience/intense_boss_music.mp3" id="10_un7em"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rp4cd"]
 shader = ExtResource("1_0o8ep")
@@ -131,60 +133,78 @@ script = ExtResource("1_lllpe")
 
 [node name="bg" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_rp4cd")
-offset_left = -2245.0
-offset_top = -1036.0
-offset_right = 2831.0
-offset_bottom = 2836.0
+offset_left = -2538.0
+offset_top = -2408.0
+offset_right = 2538.0
+offset_bottom = 1464.0
 
 [node name="FinalBossPlatform" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(285, 1031)
+position = Vector2(-384, -341)
+
+[node name="FinalBossPlatform6" parent="." instance=ExtResource("1_yiw31")]
+position = Vector2(395, -341)
 
 [node name="FinalBossPlatform2" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(-721, 1464)
+position = Vector2(-1014, 92)
 
 [node name="FinalBossPlatform3" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(1275, 1455)
+position = Vector2(982, 83)
 
 [node name="FinalBossPlatform4" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(-90, 1774)
+position = Vector2(-383, 402)
 
 [node name="FinalBossPlatform5" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(644, 1774)
+position = Vector2(351, 402)
 
-[node name="???" type="AnimatedSprite2D" parent="."]
-position = Vector2(292, 1371)
+[node name="entity" type="AnimatedSprite2D" parent="."]
 scale = Vector2(7.75, 7.75)
 sprite_frames = SubResource("SpriteFrames_6krk6")
 autoplay = "default"
 
 [node name="Player" parent="." instance=ExtResource("2_kosf7")]
-position = Vector2(279, 931)
+position = Vector2(-389, -479)
 
 [node name="bossCamera" type="Camera2D" parent="."]
-position = Vector2(293, 1372)
 zoom = Vector2(0.6, 0.6)
-
-[node name="aberration" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_xdfqd")
-offset_left = -2326.0
-offset_top = -1172.0
-offset_right = 2856.0
-offset_bottom = 3036.0
 
 [node name="glitch" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_xdfqd")
-offset_left = -2326.0
-offset_top = -1172.0
-offset_right = 2856.0
-offset_bottom = 3036.0
+offset_left = -2619.0
+offset_top = -2387.0
+offset_right = 2563.0
+offset_bottom = 1507.0
+
+[node name="aberration" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_xdfqd")
+offset_left = -2506.0
+offset_top = -980.0
+offset_right = 2676.0
+offset_bottom = 1492.0
 
 [node name="entity_aberration" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_80jrf")
-position = Vector2(291, 1368)
+position = Vector2(-1.99998, -4)
 rotation = -1.56861
 scale = Vector2(10.9261, 9.63943)
 sprite_frames = SubResource("SpriteFrames_0s5gc")
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("4_p0rry")]
-position = Vector2(282, 820)
+position = Vector2(-387, -570)
 timeline = ExtResource("7_oheaj")
+
+[node name="attackTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="killbox" parent="." instance=ExtResource("9_wnyy2")]
+position = Vector2(22, 1194)
+scale = Vector2(75.6325, 10.9133)
+
+[node name="IntenseBossMusic" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -5)
+stream = ExtResource("10_un7em")
+volume_db = -1.981
+autoplay = true
+max_distance = 8000.0
+attenuation = 1e-05
+
+[connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]
