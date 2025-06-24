@@ -117,6 +117,6 @@ func teleport(coordinates: Vector2):
 
 func hit_ball():
 	hits += 1
-	Global.setAberration(hits/10)
+	Global.setAberration(hits)
 	
 	Global.glitch(1)

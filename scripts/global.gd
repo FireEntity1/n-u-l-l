@@ -76,6 +76,6 @@ func get_player_pos():
 func set_player_pos(position: Vector2):
 	player_pos = position
 
-func setAberration(value):
-	aberration = value
+func setAberration(value: float):
+	aberration = value/20
 	print(aberration)
