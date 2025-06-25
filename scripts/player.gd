@@ -28,6 +28,11 @@ func _ready():
 		$camera.enabled = false
 
 func _physics_process(delta):
+	
+	if hits > 3:
+		var timeline = preload("res://dialogic/level7death.dtl")
+		Dialogic.start_timeline(timeline)
+	
 	var direction = Input.get_axis("left", "right")
 	
 	Global.set_player_pos(self.position)

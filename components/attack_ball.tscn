@@ -22,7 +22,7 @@ texture = ExtResource("1_gnst7")
 shape = SubResource("CircleShape2D_407rc")
 
 [node name="initialHoming" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.3
 autostart = true
 
 [connection signal="body_entered" from="body/area" to="body" method="_on_area_body_entered"]

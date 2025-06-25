@@ -2,6 +2,8 @@ extends Node
 
 var killed = false
 
+var is_attacking = false
+
 var faded = false
 var fadeNode
 
@@ -79,3 +81,6 @@ func set_player_pos(position: Vector2):
 func setAberration(value: float):
 	aberration = value/20
 	print(aberration)
+
+func setAttacking(value):
+	is_attacking = value

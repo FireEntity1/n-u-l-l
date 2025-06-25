@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dtrevaib0imo8"]
+[gd_scene load_steps=23 format=3 uid="uid://dtrevaib0imo8"]
 
 [ext_resource type="Shader" path="res://shaders/balatro_style_background.gdshader" id="1_0o8ep"]
 [ext_resource type="Script" path="res://scripts/bossfight.gd" id="1_lllpe"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="4_p0rry"]
 [ext_resource type="Resource" path="res://dialogic/level7bossintro.dtl" id="7_oheaj"]
 [ext_resource type="PackedScene" uid="uid://c50in8lqomyea" path="res://components/killbox.tscn" id="9_wnyy2"]
-[ext_resource type="AudioStream" uid="uid://dt2daa287w3tk" path="res://audio/Ambience/intense_boss_music.mp3" id="10_un7em"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rp4cd"]
 shader = ExtResource("1_0o8ep")
@@ -150,12 +149,6 @@ position = Vector2(-1014, 92)
 [node name="FinalBossPlatform3" parent="." instance=ExtResource("1_yiw31")]
 position = Vector2(982, 83)
 
-[node name="FinalBossPlatform4" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(-383, 402)
-
-[node name="FinalBossPlatform5" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(351, 402)
-
 [node name="entity" type="AnimatedSprite2D" parent="."]
 scale = Vector2(7.75, 7.75)
 sprite_frames = SubResource("SpriteFrames_6krk6")
@@ -199,12 +192,14 @@ autostart = true
 position = Vector2(22, 1194)
 scale = Vector2(75.6325, 10.9133)
 
-[node name="IntenseBossMusic" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(0, -5)
-stream = ExtResource("10_un7em")
-volume_db = -1.981
-autoplay = true
-max_distance = 8000.0
-attenuation = 1e-05
+[node name="killbox2" parent="." instance=ExtResource("9_wnyy2")]
+position = Vector2(-2051, -527)
+rotation = 1.58644
+scale = Vector2(75.6325, 10.9133)
+
+[node name="killbox3" parent="." instance=ExtResource("9_wnyy2")]
+position = Vector2(1856, -608)
+rotation = 1.58644
+scale = Vector2(75.6325, 10.9133)
 
 [connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]

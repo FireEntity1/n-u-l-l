@@ -16,16 +16,16 @@ func _on_area_body_entered(body):
 		queue_free()
 
 func _physics_process(delta):
+	target_pos = Global.get_player_pos() - Vector2(389, 479)
 	if homing:
 		direction = (target_pos - global_position).normalized()
-	
-	self.velocity = direction * 1300
-	
+
+	velocity = direction * 1300
 	move_and_slide()
-	
+
 	if position.x > 3000 or position.x < -3000 or position.y > 3000 or position.y < -3000:
 		queue_free()
 
-
 func _on_initial_homing_timeout():
 	homing = false
+	print("homing timer out!")

@@ -29,18 +29,19 @@ func _physics_process(delta):
 	$entity_aberration.material.set_shader_parameter("spread", entityCASpread)
 
 func _on_attack_timer_timeout():
-	var current = attacks.pick_random()
-	
-	match phase:
-		1:
-			attacks = ["ball"]
-		2:
-			attacks = ["ball", "big_spinny"]
+	if Global.is_attacking:
+		var current = attacks.pick_random()
 		
-	match current:
-		"ball":
-			var instance = ball_scene.instantiate()
-			instance.get_node("body").position = Vector2(292, 1371)
-			$entity.add_child(instance)
-			cycles += 1
-			print("added")
+		match phase:
+			1:
+				attacks = ["ball"]
+			2:
+				attacks = ["ball", "big_spinny"]
+			
+		match current:
+			"ball":
+				var instance = ball_scene.instantiate()
+				instance.get_node("body").position = Vector2(292, 1371)
+				$entity.add_child(instance)
+				cycles += 1
+				print("added")

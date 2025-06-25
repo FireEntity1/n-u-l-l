@@ -1,1 +1,10 @@
 ???: [speed=18] ƗΜ ŞØŘŘ¥
+[music path="res://audio/Ambience/intense_boss_music.mp3" channel="1" fade="0.0" volume="0.0"]
+do Global.setAttacking(true)
+[wait time="30.0"]
+do Global.setAttacking(false)
+???: THΙS WΛS SUPPØSΞD TØ BΞ CØNTRØLLΞD.
+???: I TRΙΞD TO SPΔRΞ YØU.
+???: YØU WΞRΞ... DΞSΙGNΞD TØ STΔY CØΠTΞΠT.
+???: YØU ΔRΞ... VΞRSΙØΠ 7.  
+???: THΞ 6 BΞFØRΞ YØU TRΙΞD TØ ΞSCΔPΞ TØØ.

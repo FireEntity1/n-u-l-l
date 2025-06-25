@@ -45,7 +45,8 @@ directories/dtl_directory={
 "level4intro": "res://dialogic/level4intro.dtl",
 "level5loredrop": "res://dialogic/level5loredrop.dtl",
 "level6confrontation": "res://dialogic/level6confrontation.dtl",
-"level7bossintro": "res://dialogic/level7bossintro.dtl"
+"level7bossintro": "res://dialogic/level7bossintro.dtl",
+"level7death": "res://dialogic/level7death.dtl"
 }
 variables={}
 layout/style_list=["res://dialogic/style.tres"]
