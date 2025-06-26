@@ -241,4 +241,4 @@ autoplay = "default"
 
 [node name="killbox" parent="." instance=ExtResource("10_ik3et")]
 position = Vector2(10028, -2341)
-scale = Vector2(364.801, 99.0909)
+scale = Vector2(414.681, 99.0909)

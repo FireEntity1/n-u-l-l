@@ -12,14 +12,14 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rp4cd"]
 shader = ExtResource("1_0o8ep")
-shader_parameter/spin_rotation_speed = 2.0
+shader_parameter/spin_rotation_speed = 1.0
 shader_parameter/move_speed = 7.0
 shader_parameter/offset = Vector2(0, 0)
 shader_parameter/colour_1 = Color(0.03, 0.03, 0.03, 1)
 shader_parameter/colour_2 = Color(0, 0, 0, 1)
 shader_parameter/colour_3 = Color(0.0126459, 0.0126459, 0.0126459, 1)
 shader_parameter/contrast = 3.5
-shader_parameter/lighting = 0.4
+shader_parameter/lighting = 0.5
 shader_parameter/spin_amount = 0.25
 shader_parameter/pixel_filter = 512.0
 shader_parameter/is_rotating = false
@@ -132,19 +132,19 @@ script = ExtResource("1_lllpe")
 
 [node name="bg" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_rp4cd")
-offset_left = -2538.0
-offset_top = -2408.0
-offset_right = 2538.0
-offset_bottom = 1464.0
+offset_left = -4493.0
+offset_top = -2227.0
+offset_right = 4503.0
+offset_bottom = 1645.0
 
 [node name="FinalBossPlatform" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(-384, -341)
+position = Vector2(-400, -341)
 
 [node name="FinalBossPlatform6" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(395, -341)
+position = Vector2(400, -341)
 
 [node name="FinalBossPlatform2" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(-1014, 92)
+position = Vector2(-982, 92)
 
 [node name="FinalBossPlatform3" parent="." instance=ExtResource("1_yiw31")]
 position = Vector2(982, 83)
@@ -182,7 +182,7 @@ scale = Vector2(10.9261, 9.63943)
 sprite_frames = SubResource("SpriteFrames_0s5gc")
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("4_p0rry")]
-position = Vector2(-387, -570)
+position = Vector2(-408, -570)
 timeline = ExtResource("7_oheaj")
 
 [node name="attackTimer" type="Timer" parent="."]
@@ -193,7 +193,7 @@ position = Vector2(22, 1194)
 scale = Vector2(75.6325, 10.9133)
 
 [node name="killbox2" parent="." instance=ExtResource("9_wnyy2")]
-position = Vector2(-2051, -527)
+position = Vector2(-1874, -518)
 rotation = 1.58644
 scale = Vector2(75.6325, 10.9133)
 

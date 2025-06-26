@@ -34,9 +34,9 @@ func _on_attack_timer_timeout():
 		
 		match phase:
 			1:
-				attacks = ["ball"]
+				$attackTimer.wait_time = 1.5
 			2:
-				attacks = ["ball", "big_spinny"]
+				$attackTimer.wait_time = 1
 			
 		match current:
 			"ball":

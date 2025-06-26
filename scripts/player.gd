@@ -30,8 +30,10 @@ func _ready():
 func _physics_process(delta):
 	
 	if hits > 3:
-		var timeline = preload("res://dialogic/level7death.dtl")
+		var timeline = load("res://dialogic/level7death.dtl")
+		Global.clear_dialogue()
 		Dialogic.start_timeline(timeline)
+		hits = 0
 	
 	var direction = Input.get_axis("left", "right")
 	

@@ -68,6 +68,9 @@ func teleport_player(x,y):
 
 func disable_camera():
 	playerCamera = false
+	
+func enable_camera():
+	playerCamera = true
 
 func get_camera_mode():
 	return playerCamera

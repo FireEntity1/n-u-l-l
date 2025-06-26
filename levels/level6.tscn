@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dd0urxb11kyx4"]
+[gd_scene load_steps=18 format=3 uid="uid://dd0urxb11kyx4"]
 
 [ext_resource type="Texture2D" uid="uid://c204vlx72ch2o" path="res://sprites/orb.png" id="1_rnmon"]
 [ext_resource type="Shader" path="res://shaders/glitch.gdshader" id="2_f1mpj"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" path="res://shaders/chrom_abb.gdshader" id="3_4yj67"]
 [ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="5_6xhx5"]
 [ext_resource type="Resource" path="res://dialogic/level6confrontation.dtl" id="6_ne034"]
+[ext_resource type="PackedScene" uid="uid://bal07flcgeqb0" path="res://components/disable_input.tscn" id="7_sc0xm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odylq"]
 size = Vector2(1816, 258)
@@ -116,3 +117,7 @@ color = Color(1, 1, 1, 0.717647)
 [node name="DialogueTrigger" parent="." instance=ExtResource("5_6xhx5")]
 position = Vector2(20, 1314)
 timeline = ExtResource("6_ne034")
+
+[node name="DisableInput" parent="." instance=ExtResource("7_sc0xm")]
+position = Vector2(18, 1308)
+time = 10

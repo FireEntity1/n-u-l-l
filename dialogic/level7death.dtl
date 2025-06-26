@@ -1,5 +1,5 @@
 do Global.setAttacking(false)
-do Global.fade_to(0)
-[wait time="2.0"]
+do Global.fade_to(1)
+[wait time="5.0"]
 do Global.remove_fade()
 do Global.changeLevel(7)

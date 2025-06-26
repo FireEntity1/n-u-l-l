@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyhgqol3p2a4t"]
+
+[ext_resource type="Texture2D" uid="uid://dv7mktdtiul0e" path="res://sprites/logo.png" id="1_1v6lg"]
+[ext_resource type="Script" path="res://scripts/title.gd" id="1_avkj1"]
+[ext_resource type="Shader" path="res://shaders/glitch.gdshader" id="2_hafm8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ml7tk"]
+shader = ExtResource("2_hafm8")
+shader_parameter/shake_power = 0.001
+shader_parameter/shake_rate = 0.06
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 3.0
+shader_parameter/shake_color_rate = 0.01
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_avkj1")
+
+[node name="bg" type="ColorRect" parent="."]
+offset_left = -131.0
+offset_top = -143.0
+offset_right = 2125.0
+offset_bottom = 1231.0
+color = Color(0, 0, 0, 1)
+
+[node name="title" type="Sprite2D" parent="."]
+position = Vector2(989, 279)
+scale = Vector2(2.144, 2.144)
+texture = ExtResource("1_1v6lg")
+
+[node name="enter_button" type="Button" parent="."]
+offset_left = 776.0
+offset_top = 577.0
+offset_right = 1189.0
+offset_bottom = 812.0
+theme_override_font_sizes/font_size = 100
+text = "ΞΠTΞR"
+
+[node name="title shader" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ml7tk")
+offset_left = 285.0
+offset_top = 87.0
+offset_right = 1681.0
+offset_bottom = 441.0
+mouse_filter = 2
+
+[node name="title shader2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ml7tk")
+offset_left = 322.0
+offset_top = 521.0
+offset_right = 1718.0
+offset_bottom = 875.0
+mouse_filter = 2
+
+[connection signal="button_up" from="enter_button" to="." method="_on_enter_button_button_up"]

@@ -4,17 +4,17 @@
 "_translation_id": "",
 "color": Color(1, 0.435547, 0.435547, 1),
 "custom_info": {
-"sound_mood_default": "Mood 1",
+"sound_mood_default": "default",
 "sound_moods": {
-"Mood 1": {
+"default": {
 "mode": 0,
-"name": "Mood 1",
-"pitch_base": 0.0,
-"pitch_variance": 0.0,
+"name": "default",
+"pitch_base": 0.3,
+"pitch_variance": -0.4,
 "skip_characters": 0.0,
 "sound_path": "res://audio/sfx/type-blip.wav",
-"volume_base": -1.0,
-"volume_variance": -1.0
+"volume_base": 1.0,
+"volume_variance": 1.0
 }
 },
 "style": ""

@@ -9,8 +9,8 @@
 "Mood 1": {
 "mode": 0,
 "name": "Mood 1",
-"pitch_base": 3.0,
-"pitch_variance": -1.0,
+"pitch_base": 2.0,
+"pitch_variance": -0.8,
 "skip_characters": 0.0,
 "sound_path": "res://audio/sfx/type-blip.wav",
 "volume_base": -1.0,

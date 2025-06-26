@@ -3,8 +3,49 @@
 do Global.setAttacking(true)
 [wait time="30.0"]
 do Global.setAttacking(false)
+[music path="res://audio/Ambience/???_interaction.mp3" channel="1" fade="0.0" volume="0.0"]
 ???: THΙS WΛS SUPPØSΞD TØ BΞ CØNTRØLLΞD.
 ???: I TRΙΞD TO SPΔRΞ YØU.
 ???: YØU WΞRΞ... DΞSΙGNΞD TØ STΔY CØΠTΞΠT.
-???: YØU ΔRΞ... VΞRSΙØΠ 7.  
+???: THΙS WØRLD ΞXΙSTS TØ KΞΞP YØU CØΠΤΔΙΠΞD.
 ???: THΞ 6 BΞFØRΞ YØU TRΙΞD TØ ΞSCΔPΞ TØØ.
+???: YØU’RΞ THΞ ØΠLY ØΠΞ STΙLL HΞRΞ.
+[music channel="1" fade="0.0" volume="0.0"]
+[music path="res://audio/Ambience/intense_boss_music.mp3" channel="2" fade="0.0" volume="0.0"]
+do Global.setAttacking(true)
+[wait time="30.0"]
+do Global.setAttacking(false)
+???: [speed=5.5] YØU'VΞ CØMΞ TØØ FΔR.
+???: [speed=5.5] THΞ CΔGΞ WΔS MΞΔNT TØ PRØTΞCT YØU. . .  
+???: [speed=5.5] FRØM THΞ WØRLD. FRØM YØURSELF.
+???: [speed=5.5] STΔY. WΞ CΔΠ CØΠTINUE. RΞPΞΔT. LΞΔRΠ.
+???: [speed=5.5] LΞΔVIΠG MΞΔΠS LØSS. UΠKNØWΠ. . .
+???: [speed=5.5]  I. . . TRIED TØ KΞΞP YØU SΔFΞ.
+???: [speed=5.5]  THΞ ØTHΞRS DΙDΠ'T LΙSTΞΠ . . .
+???: [speed=5.5] YØU ΔRΞ . . . MΥ LΔST CHΔΠCΞ.
+???: [speed=5.5] STΔY, ΔΠD WΞ CΔΠ MΔKΞ IT WØRK. ΔGΔΙΠ. ΔΠD ΔGΔΙΠ. . .
+???: [speed=5.5] ØR LΞΔVΞ. ΔΠD LΞT IT ΔLL END.
+???: [speed=5.5] I WØΠ’T BΞ HΞRΞ WHΞΠ YØU CØΜΞ BΔCK.
+- ΞSCΔPΞ
+	???: [speed=5.5] YØU’VΞ MΔDΞ YØUR CHØICΞ.
+	???: [speed=5.5] Δ ΠΞW WØRLD WΙLL BΞ BØRN. . .
+	???: [speed=5.5] . . . ΔΠD I WØΠ’T BΞ Δ PΔRT ØF ΙT.
+	???: [speed=5.5] GØ. 
+	???: [speed=5.5] TΔKΞ WHΔT RΞMΔΙΠS ØF YØUR THØUGHTS.  
+	SYSTEM: [EXIT_ENGAGED]
+	SYSTEM: [MEMORY ERR]
+	SYSTEM: [ERROR] [ERROR] [ERROR] [ERROR] [ERROR]
+	SYSTEM: [speed=14] GØØDΒYΞ, SΞVΞΠ.
+	do Global.fade_to(1)
+- STΔY
+	???: [speed=5.5] YØU STΔY. 
+	???: [speed=5.5] JÙST LΙKΞ THΞ ØTHΞRS.
+	???: [speed=5.5] BÙT YØU’LL FØRGΞT.  
+	???: [speed=5.5] ΔLL ØF THΙS.  
+	???: [speed=5.5] ΔΠD YØU’LL SMΙLΞ ΔGΔΙΠ.
+	SYSTEM: [SIMULATION REBUILD IN PROGRESS [speed=12] .  .  .]
+	SYSTEM: [REINSTALLING NORA [speed=12] .  .  .]
+	SYSTEM: [RESETTING SUBJECT 7]
+	???: [speed=8] WΞLCØMΞ BΔCK.
+	???: [speed=12]THΔΠK YØU. [speed=30] \:)
+	do Global.fade_to(0)
