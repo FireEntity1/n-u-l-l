@@ -1,11 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://cdhki8ic5ipib"]
+[gd_scene load_steps=21 format=3 uid="uid://cdhki8ic5ipib"]
 
 [ext_resource type="Shader" path="res://shaders/bg.gdshader" id="1_t7ype"]
 [ext_resource type="PackedScene" uid="uid://dav5twmuvn8o0" path="res://components/player.tscn" id="3_8nxtr"]
-[ext_resource type="Texture2D" uid="uid://c204vlx72ch2o" path="res://sprites/orb.png" id="3_cctvm"]
 [ext_resource type="Shader" path="res://shaders/pixel.gdshader" id="3_npk6f"]
 [ext_resource type="PackedScene" uid="uid://1bo16nmheked" path="res://components/platform-2.tscn" id="4_6ogdg"]
-[ext_resource type="AudioStream" uid="uid://bdbqtdgww8ghj" path="res://audio/Ambience/eerie-melody.mp3" id="5_el0q0"]
+[ext_resource type="AudioStream" uid="uid://c4j15iknjujb2" path="res://audio/Ambience/ambience-l5.mp3" id="4_lr0bp"]
 [ext_resource type="PackedScene" uid="uid://duf8sn5nj8wmu" path="res://components/dialogue_trigger.tscn" id="7_8xqvx"]
 [ext_resource type="Resource" path="res://dialogic/level5loredrop.dtl" id="8_ukuyc"]
 [ext_resource type="Texture2D" uid="uid://clv7331ho32oh" path="res://sprites/logs-orb.png" id="9_e41np"]
@@ -54,56 +53,6 @@ shader_parameter/noise_texture = SubResource("NoiseTexture2D_4p18a")
 shader = ExtResource("3_npk6f")
 shader_parameter/pixel_size = 16
 shader_parameter/screen_size = Vector2(1920, 1080)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_le5py"]
-atlas = ExtResource("3_cctvm")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p1gan"]
-atlas = ExtResource("3_cctvm")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nitsb"]
-atlas = ExtResource("3_cctvm")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8q1jf"]
-atlas = ExtResource("3_cctvm")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4lo4k"]
-atlas = ExtResource("3_cctvm")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5yu16"]
-atlas = ExtResource("3_cctvm")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_35epd"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_le5py")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p1gan")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nitsb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8q1jf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4lo4k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5yu16")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r07gv"]
 atlas = ExtResource("9_e41np")
@@ -171,27 +120,13 @@ offset_top = -12347.0
 offset_right = 21485.0
 offset_bottom = 2261.0
 
-[node name="parallax" type="Parallax2D" parent="."]
-scale = Vector2(8.6875, 8.6875)
-scroll_scale = Vector2(0.8, 0.8)
-scroll_offset = Vector2(5174, -8344)
-
-[node name="orb" type="AnimatedSprite2D" parent="parallax"]
-top_level = true
-visibility_layer = 2
-z_index = 1
-position = Vector2(4812, -8197)
-scale = Vector2(1.24995, 1.24995)
-sprite_frames = SubResource("SpriteFrames_35epd")
-autoplay = "default"
-
 [node name="Player" parent="." instance=ExtResource("3_8nxtr")]
 position = Vector2(3840, -7587)
 
 [node name="Eerie-melody" type="AudioStreamPlayer2D" parent="Player"]
-position = Vector2(-14, 33)
-stream = ExtResource("5_el0q0")
-volume_db = 14.857
+position = Vector2(6152, 406)
+stream = ExtResource("4_lr0bp")
+volume_db = 6.993
 autoplay = true
 max_distance = 20000.0
 attenuation = 0.00064429

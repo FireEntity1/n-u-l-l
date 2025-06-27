@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://g7rsu4ya7m5j"]
+[gd_scene load_steps=9 format=3 uid="uid://g7rsu4ya7m5j"]
 
 [ext_resource type="Script" path="res://scripts/jump_pad.gd" id="1_2th2d"]
 [ext_resource type="Texture2D" uid="uid://bb2324t63cld3" path="res://sprites/jump_pad.png" id="1_b2nc7"]
+[ext_resource type="AudioStream" uid="uid://bvs4oawdu5ulv" path="res://audio/sfx/whoosh.mp3" id="3_5010r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vrp3t"]
 atlas = ExtResource("1_b2nc7")
@@ -51,5 +52,12 @@ frame_progress = 0.620444
 [node name="collision" type="CollisionShape2D" parent="area"]
 position = Vector2(-0.0924909, 0.00307178)
 shape = SubResource("RectangleShape2D_obwvc")
+
+[node name="Bounce" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-0.259556, 4.95065e-07)
+stream = ExtResource("3_5010r")
+volume_db = -0.495
+pitch_scale = 0.84
+attenuation = 1e-05
 
 [connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]

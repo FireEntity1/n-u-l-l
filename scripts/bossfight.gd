@@ -44,4 +44,3 @@ func _on_attack_timer_timeout():
 				instance.get_node("body").position = Vector2(292, 1371)
 				$entity.add_child(instance)
 				cycles += 1
-				print("added")

@@ -23,12 +23,14 @@ var onground = true
 func _ready():
 	Global.respawn = Vector2(0,0)
 	$particles.emitting = true
+	Global.setAberration(1)
 	await get_tree().create_timer(0.5).timeout
 	$particles.emitting = false
 	hits = 0
 	$camera.enabled = true
 	if not Global.get_camera_mode():
 		$camera.enabled = false
+	
 
 func _physics_process(delta):
 	

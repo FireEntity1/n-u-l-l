@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhrf8kxcc0lt"]
+[gd_scene load_steps=5 format=3 uid="uid://bhrf8kxcc0lt"]
 
 [ext_resource type="Texture2D" uid="uid://dsy3l5l1ioo6d" path="res://sprites/orb-attack.png" id="1_gnst7"]
 [ext_resource type="Script" path="res://scripts/attack_ball.gd" id="1_hmoyn"]
+[ext_resource type="AudioStream" uid="uid://sargg5ltda88" path="res://audio/sfx/BOOM.mp3" id="3_7vtvr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_407rc"]
 radius = 9.0
@@ -20,6 +21,15 @@ texture = ExtResource("1_gnst7")
 
 [node name="collision" type="CollisionShape2D" parent="body/area"]
 shape = SubResource("CircleShape2D_407rc")
+
+[node name="Boom" type="AudioStreamPlayer2D" parent="body"]
+position = Vector2(-29, 4)
+stream = ExtResource("3_7vtvr")
+volume_db = 11.39
+pitch_scale = 0.58
+autoplay = true
+max_distance = 10000.0
+attenuation = 4.95759e-05
 
 [node name="initialHoming" type="Timer" parent="."]
 wait_time = 0.3

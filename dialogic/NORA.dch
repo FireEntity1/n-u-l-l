@@ -9,12 +9,12 @@
 "Mood 1": {
 "mode": 0,
 "name": "Mood 1",
-"pitch_base": 2.0,
-"pitch_variance": -0.8,
+"pitch_base": 0.9,
+"pitch_variance": 0.1,
 "skip_characters": 0.0,
 "sound_path": "res://audio/sfx/type-blip.wav",
-"volume_base": -1.0,
-"volume_variance": -1.0
+"volume_base": -2.0,
+"volume_variance": -0.8
 }
 },
 "style": ""

@@ -8,7 +8,7 @@ NORA: You will now be proceeding unassisted.
 NORA: Good luck, [SUBJECT]!
 do Global.tv_static(4)
 [wait time="4.0"]
-???: IT CΛNNØT BΞ KNØWN
-???: STΔY IGNØRΛNT. STΔY SΔFE.
+???: [speed=5.5] IT CΛNNØT BΞ KNØWN
+???: [speed=5.5] STΔY IGNØRΛNT. STΔY SΔFE.
 do Global.remove_fade()
 do Global.changeLevel(5)

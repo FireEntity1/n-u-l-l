@@ -1,20 +1,21 @@
 ???: [speed=18] ƗΜ ŞØŘŘ¥
+[sound path="res://audio/sfx/BOOM.mp3" volume="0.0"]
 [music path="res://audio/Ambience/intense_boss_music.mp3" channel="1" fade="0.0" volume="0.0"]
 do Global.setAttacking(true)
 [wait time="30.0"]
 do Global.setAttacking(false)
-[music path="res://audio/Ambience/???_interaction.mp3" channel="1" fade="0.0" volume="0.0"]
 ???: THΙS WΛS SUPPØSΞD TØ BΞ CØNTRØLLΞD.
 ???: I TRΙΞD TO SPΔRΞ YØU.
 ???: YØU WΞRΞ... DΞSΙGNΞD TØ STΔY CØΠTΞΠT.
 ???: THΙS WØRLD ΞXΙSTS TØ KΞΞP YØU CØΠΤΔΙΠΞD.
 ???: THΞ 6 BΞFØRΞ YØU TRΙΞD TØ ΞSCΔPΞ TØØ.
 ???: YØU’RΞ THΞ ØΠLY ØΠΞ STΙLL HΞRΞ.
-[music channel="1" fade="0.0" volume="0.0"]
-[music path="res://audio/Ambience/intense_boss_music.mp3" channel="2" fade="0.0" volume="0.0"]
 do Global.setAttacking(true)
 [wait time="30.0"]
 do Global.setAttacking(false)
+[music channel="1" fade="0.0" volume="0.0"]
+[music path="res://audio/Ambience/???_interaction.mp3" fade="0.0" volume="0.0"]
+do Global.setAberration(0.15)
 ???: [speed=5.5] YØU'VΞ CØMΞ TØØ FΔR.
 ???: [speed=5.5] THΞ CΔGΞ WΔS MΞΔNT TØ PRØTΞCT YØU. . .
 ???: [speed=5.5] FRØM THΞ WØRLD. FRØM YØURSELF.

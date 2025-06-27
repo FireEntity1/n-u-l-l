@@ -4,6 +4,8 @@ var killed = false
 
 var is_attacking = false
 
+var bgshader = 8
+
 var faded = false
 var fadeNode
 
@@ -20,6 +22,9 @@ func _ready():
 
 func _process(delta):
 	pass
+
+func setbgshader(value):
+	bgshader = value
 
 func get_kill_status():
 	if killed == true:

@@ -13,10 +13,12 @@ func _ready():
 func _on_area_body_entered(body):
 	if body is CharacterBody2D:
 		body.hit_ball()
+		$Boom.play()
 		queue_free()
 
 func _physics_process(delta):
 	target_pos = Global.get_player_pos() - Vector2(389, 479)
+
 	if homing:
 		direction = (target_pos - global_position).normalized()
 
