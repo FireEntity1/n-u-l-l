@@ -4,5 +4,5 @@ extends Node2D
 
 func _on_area_body_entered(body):
 	if body is CharacterBody2D:
-		body.position = coordinates
+		body.global_position = coordinates
 		self.queue_free()

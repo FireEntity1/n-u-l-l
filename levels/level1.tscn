@@ -9,7 +9,7 @@
 [ext_resource type="Resource" path="res://dialogic/level1.dtl" id="6_lbf0e"]
 [ext_resource type="Resource" path="res://dialogic/level1end.dtl" id="7_xx0x8"]
 [ext_resource type="PackedScene" uid="uid://cfpcmbj31aaqw" path="res://components/end_flag.tscn" id="9_bfm2e"]
-[ext_resource type="AudioStream" uid="uid://lvecu3pye84" path="res://audio/Ambience/piano-happy.mp3" id="10_qii45"]
+[ext_resource type="AudioStream" uid="uid://cvc5r4fu6uy6i" path="res://audio/Ambience/calm-ambience.mp3" id="9_ku0yi"]
 [ext_resource type="PackedScene" uid="uid://dwwhcqh1myu0e" path="res://components/checkpoint.tscn" id="11_uxqtt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_11i45"]
@@ -119,6 +119,11 @@ position = Vector2(9121, 2733)
 rotation = 3.14159
 scale = Vector2(343.145, -65.116)
 
+[node name="killbox3" parent="." instance=ExtResource("4_1sq5h")]
+position = Vector2(1401, -4220)
+rotation = 3.14159
+scale = Vector2(184.514, -12.4739)
+
 [node name="killbox2" parent="." instance=ExtResource("4_1sq5h")]
 position = Vector2(14491, -401)
 rotation = 3.14159
@@ -129,15 +134,16 @@ position = Vector2(-168, -219)
 timeline = ExtResource("6_lbf0e")
 
 [node name="DialogueTrigger2" parent="." instance=ExtResource("5_n3ekb")]
-position = Vector2(8962, -5488)
+position = Vector2(1097, -5742)
 timeline = ExtResource("7_xx0x8")
 
 [node name="EndFlag" parent="." instance=ExtResource("9_bfm2e")]
-position = Vector2(8974, -5543)
+position = Vector2(1109, -5797)
 
 [node name="song" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-370, -57)
-stream = ExtResource("10_qii45")
+stream = ExtResource("9_ku0yi")
+volume_db = 7.429
 autoplay = true
 max_distance = 20000.0
 attenuation = 1e-05
@@ -148,6 +154,9 @@ position = Vector2(-370, -57)
 
 [node name="Checkpoint" parent="." instance=ExtResource("11_uxqtt")]
 position = Vector2(7932, -3088)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("11_uxqtt")]
+position = Vector2(7084, -5913)
 
 [node name="Platform21" parent="." instance=ExtResource("2_ajspr")]
 position = Vector2(12005, -3615)
@@ -173,5 +182,41 @@ position = Vector2(10553, -5019)
 [node name="Platform28" parent="." instance=ExtResource("2_ajspr")]
 position = Vector2(9861, -5131)
 
+[node name="Platform36" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(8884, -5292)
+
+[node name="Platform37" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(7917, -5043)
+
+[node name="Platform38" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(7668, -5631)
+
+[node name="Platform39" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(6870, -5326)
+
+[node name="Platform40" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(6027, -5569)
+
+[node name="Platform41" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(5235, -5756)
+
+[node name="Platform42" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(4449, -5586)
+
+[node name="Platform43" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(3657, -5416)
+
+[node name="Platform44" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(5196, -5275)
+
+[node name="Platform45" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(2860, -5524)
+
+[node name="Platform46" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(1966, -5547)
+
+[node name="Platform47" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(5957, -5033)
+
 [node name="Platform29" parent="." instance=ExtResource("2_ajspr")]
-position = Vector2(8973, -5255)
+position = Vector2(1108, -5509)

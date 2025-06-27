@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dav5twmuvn8o0"]
+[gd_scene load_steps=8 format=3 uid="uid://dav5twmuvn8o0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ytl57"]
 [ext_resource type="Texture2D" uid="uid://uk4r5icpm5js" path="res://sprites/player.png" id="2_2a4mc"]
+[ext_resource type="AudioStream" uid="uid://bvs4oawdu5ulv" path="res://audio/sfx/whoosh.mp3" id="3_3fyig"]
+[ext_resource type="AudioStream" uid="uid://dl4yjc81ta473" path="res://audio/sfx/slam-land.mp3" id="4_uj2c5"]
+[ext_resource type="AudioStream" uid="uid://bbxixufmi1qee" path="res://audio/sfx/standard-land.mp3" id="5_8t6yw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yaalc"]
 size = Vector2(38, 32)
@@ -48,6 +51,16 @@ wait_time = 0.15
 emitting = false
 amount = 128
 process_material = SubResource("ParticleProcessMaterial_qsg7g")
+
+[node name="whoosh" type="AudioStreamPlayer2D" parent="character"]
+stream = ExtResource("3_3fyig")
+
+[node name="slam_land" type="AudioStreamPlayer2D" parent="character"]
+stream = ExtResource("4_uj2c5")
+
+[node name="standard_land" type="AudioStreamPlayer2D" parent="character"]
+stream = ExtResource("5_8t6yw")
+volume_db = 5.447
 
 [connection signal="timeout" from="character/dashTimer" to="character" method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="character/dashCool" to="character" method="_on_dash_cool_timeout"]

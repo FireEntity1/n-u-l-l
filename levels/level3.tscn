@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://82tuljhmxivf"]
+[gd_scene load_steps=33 format=3 uid="uid://82tuljhmxivf"]
 
 [ext_resource type="Texture2D" uid="uid://ck3p1ou575wr4" path="res://sprites/clouds-2.png" id="1_6qo2p"]
 [ext_resource type="Shader" path="res://shaders/bg_sky.gdshader" id="1_cr06g"]
@@ -20,6 +20,7 @@
 [ext_resource type="Shader" path="res://shaders/glitch.gdshader" id="16_yl101"]
 [ext_resource type="Shader" path="res://shaders/chrom_abb.gdshader" id="18_t68dq"]
 [ext_resource type="PackedScene" uid="uid://ma52vx2eodb4" path="res://components/teleporter.tscn" id="19_1kwv0"]
+[ext_resource type="AudioStream" uid="uid://dxcny1ucibsdy" path="res://audio/Ambience/wind-ambience.mp3" id="21_8f1tx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_20y5m"]
 shader = ExtResource("1_cr06g")
@@ -104,10 +105,11 @@ scroll_scale = Vector2(0.7, 0.7)
 
 [node name="bg" type="ColorRect" parent="Parallax2D"]
 material = SubResource("ShaderMaterial_20y5m")
-offset_left = -3815.0
+offset_left = -22274.0
 offset_top = -9989.0
-offset_right = 16336.0
+offset_right = -2123.0
 offset_bottom = 4571.0
+scale = Vector2(2.04, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="skyCol2" type="ColorRect" parent="."]
@@ -160,7 +162,106 @@ scale = Vector2(28.0812, 51.6594)
 texture = ExtResource("2_p82im")
 
 [node name="Platform" parent="." instance=ExtResource("3_72pik")]
-position = Vector2(-632, -4667)
+position = Vector2(-17532, -5042)
+
+[node name="Platform15" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-16454, -5199)
+
+[node name="Platform16" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-15462, -5464)
+
+[node name="Platform17" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-15453, -4808)
+
+[node name="Platform18" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-14528, -4462)
+
+[node name="Platform19" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-13603, -4125)
+
+[node name="Platform20" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-14618, -5845)
+
+[node name="Platform21" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-13864, -6200)
+
+[node name="Platform22" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-14510, -6550)
+
+[node name="Platform23" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-13191, -6631)
+
+[node name="Platform24" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-12216, -6692)
+
+[node name="Platform25" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-10439, -6709)
+
+[node name="Platform26" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-12618, -4212)
+
+[node name="Platform27" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-11714, -4407)
+
+[node name="Platform28" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-10772, -4573)
+
+[node name="Platform29" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-9821, -4720)
+
+[node name="Platform30" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-8794, -4958)
+
+[node name="Platform31" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-7510, -5210)
+
+[node name="Platform32" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-6576, -5445)
+
+[node name="Platform33" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-9484, -6414)
+
+[node name="Platform34" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-8515, -6129)
+
+[node name="Platform35" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-7781, -5823)
+
+[node name="Platform36" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-10033, -4234)
+
+[node name="Platform37" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-13846, -6978)
+
+[node name="Platform38" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-12032, -3843)
+
+[node name="Platform39" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-13383, -4770)
+
+[node name="Platform40" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-8087, -4770)
+
+[node name="Platform41" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-5663, -5378)
+
+[node name="Platform42" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-4791, -5386)
+
+[node name="Platform43" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-3519, -5738)
+
+[node name="Platform44" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-3567, -4826)
+
+[node name="Platform45" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-2479, -5250)
+
+[node name="Platform46" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-1367, -5170)
+
+[node name="Platform47" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-663, -4834)
 
 [node name="Platform2" parent="." instance=ExtResource("3_72pik")]
 position = Vector2(598, -4711)
@@ -193,13 +294,13 @@ position = Vector2(7765, -4090)
 position = Vector2(9124, -4461)
 
 [node name="Player" parent="." instance=ExtResource("4_b0567")]
-position = Vector2(-649, -4764)
+position = Vector2(-17549, -5139)
 
 [node name="JumpPad" parent="." instance=ExtResource("5_88khe")]
 position = Vector2(2040, -3375)
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("6_r6v43")]
-position = Vector2(-649, -4911)
+position = Vector2(-17549, -5286)
 timeline = ExtResource("7_5mcfd")
 
 [node name="GlitchTrigger" parent="." instance=ExtResource("8_krubi")]
@@ -220,15 +321,21 @@ position = Vector2(9118, -4695)
 timeline = ExtResource("10_4luvg")
 
 [node name="DialogueClearer" parent="." instance=ExtResource("9_rurpq")]
-position = Vector2(4253, -4762)
+position = Vector2(4711, -4852)
 scale = Vector2(1, 9.03999)
 
 [node name="Platform9" parent="." instance=ExtResource("11_qsbvp")]
 position = Vector2(5366, -3666)
 
+[node name="Platform13" parent="." instance=ExtResource("11_qsbvp")]
+position = Vector2(5307, -4355)
+
+[node name="Platform14" parent="." instance=ExtResource("11_qsbvp")]
+position = Vector2(5913, -3234)
+
 [node name="killbox" parent="." instance=ExtResource("12_d2jf3")]
-position = Vector2(234, -554)
-scale = Vector2(202.444, 52.0427)
+position = Vector2(-8215, -393)
+scale = Vector2(419.404, 52.0427)
 
 [node name="killbox2" parent="." instance=ExtResource("12_d2jf3")]
 position = Vector2(18154, -618)
@@ -291,4 +398,16 @@ color = Color(1, 1, 1, 0.717647)
 [node name="Teleporter" parent="." instance=ExtResource("19_1kwv0")]
 position = Vector2(9261, 6049)
 scale = Vector2(7.829, 3.47612)
-coordinates = Vector2(10354, 10000)
+coordinates = Vector2(9700, 10000)
+
+[node name="Wind-ambience" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(4617, -4310)
+stream = ExtResource("21_8f1tx")
+volume_db = 8.914
+autoplay = true
+max_distance = 90000.0
+attenuation = 1e-05
+panning_strength = 0.0
+
+[node name="JumpPad3" parent="." instance=ExtResource("5_88khe")]
+position = Vector2(-12044, -6773)

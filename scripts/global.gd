@@ -32,6 +32,7 @@ func setSpawn(spawn: Vector2):
 	respawn = spawn
 
 func getSpawn():
+	print(respawn)
 	return respawn
 
 func changeLevel(level):

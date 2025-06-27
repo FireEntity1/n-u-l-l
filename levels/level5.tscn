@@ -205,8 +205,35 @@ position = Vector2(4927, -7181)
 [node name="Platform3" parent="." instance=ExtResource("4_6ogdg")]
 position = Vector2(6091, -6844)
 
+[node name="Platform12" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(5764, -7539)
+
+[node name="Platform13" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(7367, -7710)
+
+[node name="Platform14" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(9476, -6745)
+
+[node name="Platform15" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(11074, -6851)
+
+[node name="Platform16" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(12502, -7398)
+
+[node name="Platform27" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(13126, -7794)
+
+[node name="Platform28" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(13887, -8076)
+
 [node name="Platform4" parent="." instance=ExtResource("4_6ogdg")]
 position = Vector2(7107, -7221)
+
+[node name="Platform25" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(7784, -6865)
+
+[node name="Platform26" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(8646, -7004)
 
 [node name="Platform5" parent="." instance=ExtResource("4_6ogdg")]
 position = Vector2(8178, -7553)
@@ -226,15 +253,39 @@ position = Vector2(12009, -6970)
 [node name="Platform10" parent="." instance=ExtResource("4_6ogdg")]
 position = Vector2(13050, -7118)
 
+[node name="Platform17" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(13786, -7378)
+
+[node name="Platform18" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(14307, -7692)
+
+[node name="Platform19" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(14850, -7476)
+
+[node name="Platform20" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(15497, -7274)
+
+[node name="Platform21" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(14419, -7108)
+
+[node name="Platform22" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(15748, -6830)
+
+[node name="Platform23" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(16305, -7140)
+
+[node name="Platform24" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(16624, -6758)
+
 [node name="Platform11" parent="." instance=ExtResource("4_6ogdg")]
-position = Vector2(14189, -6932)
+position = Vector2(17501, -6457)
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("7_8xqvx")]
-position = Vector2(14197, -7208.88)
+position = Vector2(17509, -6733.88)
 timeline = ExtResource("8_ukuyc")
 
 [node name="orb-logs" type="AnimatedSprite2D" parent="."]
-position = Vector2(14197, -7197.88)
+position = Vector2(17509, -6722.88)
 scale = Vector2(6.625, 6.625)
 sprite_frames = SubResource("SpriteFrames_ysb8c")
 autoplay = "default"

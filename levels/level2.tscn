@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://duepu4u3p5ux2"]
+[gd_scene load_steps=18 format=3 uid="uid://duepu4u3p5ux2"]
 
 [ext_resource type="Shader" path="res://shaders/bg_sky.gdshader" id="1_d6dwi"]
 [ext_resource type="PackedScene" uid="uid://cfpcmbj31aaqw" path="res://components/end_flag.tscn" id="2_cpa2l"]
@@ -10,10 +10,11 @@
 [ext_resource type="Resource" path="res://dialogic/level2glitch.dtl" id="7_w7vng"]
 [ext_resource type="Resource" path="res://dialogic/level2main.dtl" id="8_3a270"]
 [ext_resource type="PackedScene" uid="uid://bc2hqrqw8d0oa" path="res://components/lava_platform.tscn" id="8_xlw8f"]
+[ext_resource type="Resource" path="res://dialogic/level2jumppad.dtl" id="9_1wq04"]
 [ext_resource type="PackedScene" uid="uid://c50in8lqomyea" path="res://components/killbox.tscn" id="10_5cl10"]
 [ext_resource type="Resource" path="res://dialogic/level2end.dtl" id="12_wvrdc"]
 [ext_resource type="PackedScene" uid="uid://g7rsu4ya7m5j" path="res://components/jump_pad.tscn" id="13_1kujh"]
-[ext_resource type="AudioStream" uid="uid://lvecu3pye84" path="res://audio/Ambience/piano-happy.mp3" id="14_ppg3m"]
+[ext_resource type="AudioStream" uid="uid://cvc5r4fu6uy6i" path="res://audio/Ambience/calm-ambience.mp3" id="15_8yryy"]
 [ext_resource type="PackedScene" uid="uid://dwwhcqh1myu0e" path="res://components/checkpoint.tscn" id="15_phdhf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jfayr"]
@@ -64,6 +65,11 @@ timeline = ExtResource("7_w7vng")
 [node name="DialogueTrigger3" parent="." instance=ExtResource("5_3gq6j")]
 position = Vector2(2643, -266)
 timeline = ExtResource("8_3a270")
+
+[node name="DialogueTrigger5" parent="." instance=ExtResource("5_3gq6j")]
+position = Vector2(4414, -1292)
+scale = Vector2(1, 3.54259)
+timeline = ExtResource("9_1wq04")
 
 [node name="killbox" parent="." instance=ExtResource("10_5cl10")]
 position = Vector2(7819, 1028)
@@ -177,7 +183,8 @@ position = Vector2(6613, -1623)
 
 [node name="song" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-370, -57)
-stream = ExtResource("14_ppg3m")
+stream = ExtResource("15_8yryy")
+volume_db = 7.429
 autoplay = true
 max_distance = 20000.0
 attenuation = 1e-05

@@ -18,6 +18,8 @@ var dir = 0
 var dashing = false
 var canDash = true
 
+var onground = true
+
 func _ready():
 	Global.respawn = Vector2(0,0)
 	$particles.emitting = true
@@ -36,6 +38,13 @@ func _physics_process(delta):
 		Dialogic.start_timeline(timeline)
 		hits = 0
 	
+	if is_on_floor() and not onground and slammed:
+		$slam_land.play()
+		onground = true
+	elif is_on_floor() and not onground:
+		$standard_land.play()
+		onground = true
+	
 	var direction = Input.get_axis("left", "right")
 	
 	Global.set_player_pos(self.position)
@@ -44,6 +53,7 @@ func _physics_process(delta):
 		jumps = 2
 	
 	if not is_on_floor():
+		onground = false
 	
 		if not slammed:
 			velocity.y += gravity * delta
@@ -86,6 +96,7 @@ func _physics_process(delta):
 		$sprite.scale.y = 0.8
 		
 	if Input.is_action_just_pressed("dash") and canDash and can_input:
+		$whoosh.play()
 		dashing = true
 		canDash = false
 		$dashTimer.start()

@@ -83,7 +83,37 @@ position = Vector2(8842, -4128)
 position = Vector2(9788, -3887)
 
 [node name="Platform12" parent="." instance=ExtResource("4_nw3us")]
-position = Vector2(9217, -3446)
+position = Vector2(10795, -3865)
+
+[node name="Platform26" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(11781, -3071)
+
+[node name="Platform27" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(11233, -4347)
+
+[node name="Platform28" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(12252, -4212)
+
+[node name="Platform29" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(13100, -3763)
+
+[node name="Platform30" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(14148, -4262)
+
+[node name="Platform31" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(9397, -3403)
+
+[node name="Platform32" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(11881, -3614)
+
+[node name="Platform33" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(6550, -3315)
+
+[node name="Platform34" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(4916, -3144)
+
+[node name="Platform35" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(3352, -2738)
 
 [node name="Platform13" parent="." instance=ExtResource("4_nw3us")]
 position = Vector2(8272, -3152)
@@ -97,11 +127,35 @@ position = Vector2(6863, -2722)
 [node name="Platform16" parent="." instance=ExtResource("4_nw3us")]
 position = Vector2(6133, -2473)
 
+[node name="Platform18" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(4815, -2481)
+
+[node name="Platform19" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(3957, -2280)
+
+[node name="Platform20" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(3099, -2089)
+
+[node name="Platform21" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(5520, -2117)
+
+[node name="Platform22" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(10292, -2982)
+
+[node name="Platform23" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(8978, -2813)
+
+[node name="Platform24" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(8118, -2468)
+
+[node name="Platform25" parent="." instance=ExtResource("4_nw3us")]
+position = Vector2(4096, -2779)
+
 [node name="Platform17" parent="." instance=ExtResource("4_nw3us")]
-position = Vector2(4965, -2519)
+position = Vector2(2325, -2017.04)
 
 [node name="EndFlag" parent="." instance=ExtResource("4_o4jys")]
-position = Vector2(4962, -2807)
+position = Vector2(2322, -2305.04)
 
 [node name="Player" parent="." instance=ExtResource("3_4ug6n")]
 position = Vector2(477, -5468)
@@ -116,9 +170,9 @@ attenuation = 0.000523327
 
 [node name="chromabb" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_8348n")
-offset_left = -747.0
+offset_left = -6455.0
 offset_top = -8773.0
-offset_right = 12245.0
+offset_right = 17953.0
 offset_bottom = -411.0
 
 [node name="glitchSquare" type="ColorRect" parent="."]
@@ -139,10 +193,10 @@ scale = Vector2(15.4829, -16.2152)
 
 [node name="glitchSquare20" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_52jtc")
-offset_left = 4689.0
-offset_top = -2362.0
-offset_right = 4725.0
-offset_bottom = -2325.0
+offset_left = 2049.0
+offset_top = -1860.04
+offset_right = 2085.0
+offset_bottom = -1823.04
 scale = Vector2(15.4829, -16.2152)
 
 [node name="glitchSquare2" type="ColorRect" parent="."]
@@ -257,6 +311,30 @@ offset_right = 8525.0
 offset_bottom = -4660.0
 scale = Vector2(15.4829, -16.2152)
 
+[node name="glitchSquare22" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 11129.0
+offset_top = -3617.0
+offset_right = 11165.0
+offset_bottom = -3580.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare23" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 12041.0
+offset_top = -3209.0
+offset_right = 12077.0
+offset_bottom = -3172.0
+scale = Vector2(15.4829, -16.2152)
+
+[node name="glitchSquare24" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_52jtc")
+offset_left = 13369.0
+offset_top = -4057.0
+offset_right = 13405.0
+offset_bottom = -4020.0
+scale = Vector2(15.4829, -16.2152)
+
 [node name="glitchSquare15" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_52jtc")
 offset_left = 5032.0
@@ -306,13 +384,23 @@ position = Vector2(487, -5620)
 timeline = ExtResource("9_8do7s")
 
 [node name="DialogueTrigger3" parent="." instance=ExtResource("8_yjijp")]
-position = Vector2(4975, -2751)
+position = Vector2(2335, -2249.04)
 timeline = ExtResource("13_pb1xy")
 
 [node name="killbox" parent="." instance=ExtResource("14_vg7pf")]
-position = Vector2(4339, -516)
+position = Vector2(8803, -516)
+scale = Vector2(223.76, 32.64)
+
+[node name="killbox3" parent="." instance=ExtResource("14_vg7pf")]
+position = Vector2(15699, -2916)
+rotation = -1.36005
 scale = Vector2(223.76, 32.64)
 
 [node name="killbox2" parent="." instance=ExtResource("14_vg7pf")]
 position = Vector2(-6651, -2953)
+scale = Vector2(223.76, 32.64)
+
+[node name="killbox4" parent="." instance=ExtResource("14_vg7pf")]
+position = Vector2(-2592, -6976)
+rotation = 1.21174
 scale = Vector2(223.76, 32.64)
