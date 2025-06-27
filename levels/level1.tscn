@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b0vkrjuc1dpve"]
+[gd_scene load_steps=13 format=3 uid="uid://b0vkrjuc1dpve"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_178lb"]
 [ext_resource type="PackedScene" uid="uid://b8stysvvq1cyy" path="res://components/platform.tscn" id="2_ajspr"]
@@ -10,6 +10,7 @@
 [ext_resource type="Resource" path="res://dialogic/level1end.dtl" id="7_xx0x8"]
 [ext_resource type="PackedScene" uid="uid://cfpcmbj31aaqw" path="res://components/end_flag.tscn" id="9_bfm2e"]
 [ext_resource type="AudioStream" uid="uid://lvecu3pye84" path="res://audio/Ambience/piano-happy.mp3" id="10_qii45"]
+[ext_resource type="PackedScene" uid="uid://dwwhcqh1myu0e" path="res://components/checkpoint.tscn" id="11_uxqtt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_11i45"]
 shader = ExtResource("2_o4iki")
@@ -71,6 +72,24 @@ position = Vector2(5157, -2231)
 [node name="Platform12" parent="." instance=ExtResource("2_ajspr")]
 position = Vector2(6054, -2155)
 
+[node name="Platform30" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(5631, -2563)
+
+[node name="Platform31" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(3916, -1508)
+
+[node name="Platform32" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(2649, -2045)
+
+[node name="Platform33" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(10940, -3079)
+
+[node name="Platform34" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(12118, -4272)
+
+[node name="Platform35" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(11499, -4461)
+
 [node name="Platform13" parent="." instance=ExtResource("2_ajspr")]
 position = Vector2(6830, -2352)
 
@@ -110,11 +129,11 @@ position = Vector2(-168, -219)
 timeline = ExtResource("6_lbf0e")
 
 [node name="DialogueTrigger2" parent="." instance=ExtResource("5_n3ekb")]
-position = Vector2(11174, -3683)
+position = Vector2(8962, -5488)
 timeline = ExtResource("7_xx0x8")
 
 [node name="EndFlag" parent="." instance=ExtResource("9_bfm2e")]
-position = Vector2(11186, -3738)
+position = Vector2(8974, -5543)
 
 [node name="song" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-370, -57)
@@ -126,3 +145,33 @@ panning_strength = 0.0
 
 [node name="Player" parent="." instance=ExtResource("3_os2vn")]
 position = Vector2(-370, -57)
+
+[node name="Checkpoint" parent="." instance=ExtResource("11_uxqtt")]
+position = Vector2(7932, -3088)
+
+[node name="Platform21" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(12005, -3615)
+
+[node name="Platform22" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(12693, -3895)
+
+[node name="Platform23" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(13325, -4267)
+
+[node name="Platform24" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(12677, -4559)
+
+[node name="Platform25" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(12041, -4771)
+
+[node name="Platform26" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(11233, -4919)
+
+[node name="Platform27" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(10553, -5019)
+
+[node name="Platform28" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(9861, -5131)
+
+[node name="Platform29" parent="." instance=ExtResource("2_ajspr")]
+position = Vector2(8973, -5255)

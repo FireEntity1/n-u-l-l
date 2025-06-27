@@ -19,6 +19,7 @@ var dashing = false
 var canDash = true
 
 func _ready():
+	Global.respawn = Vector2(0,0)
 	$particles.emitting = true
 	await get_tree().create_timer(0.5).timeout
 	$particles.emitting = false

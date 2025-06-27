@@ -16,7 +16,7 @@ do Global.setAttacking(true)
 [wait time="30.0"]
 do Global.setAttacking(false)
 ???: [speed=5.5] YØU'VΞ CØMΞ TØØ FΔR.
-???: [speed=5.5] THΞ CΔGΞ WΔS MΞΔNT TØ PRØTΞCT YØU. . .  
+???: [speed=5.5] THΞ CΔGΞ WΔS MΞΔNT TØ PRØTΞCT YØU. . .
 ???: [speed=5.5] FRØM THΞ WØRLD. FRØM YØURSELF.
 ???: [speed=5.5] STΔY. WΞ CΔΠ CØΠTINUE. RΞPΞΔT. LΞΔRΠ.
 ???: [speed=5.5] LΞΔVIΠG MΞΔΠS LØSS. UΠKNØWΠ. . .
@@ -27,25 +27,28 @@ do Global.setAttacking(false)
 ???: [speed=5.5] ØR LΞΔVΞ. ΔΠD LΞT IT ΔLL END.
 ???: [speed=5.5] I WØΠ’T BΞ HΞRΞ WHΞΠ YØU CØΜΞ BΔCK.
 - ΞSCΔPΞ
-	???: [speed=5.5] YØU’VΞ MΔDΞ YØUR CHØICΞ.
 	???: [speed=5.5] Δ ΠΞW WØRLD WΙLL BΞ BØRN. . .
 	???: [speed=5.5] . . . ΔΠD I WØΠ’T BΞ Δ PΔRT ØF ΙT.
-	???: [speed=5.5] GØ. 
-	???: [speed=5.5] TΔKΞ WHΔT RΞMΔΙΠS ØF YØUR THØUGHTS.  
+	???: [speed=5.5] GØ.
+	???: [speed=5.5] TΔKΞ WHΔT RΞMΔΙΠS ØF YØUR THØUGHTS.
 	SYSTEM: [EXIT_ENGAGED]
 	SYSTEM: [MEMORY ERR]
 	SYSTEM: [ERROR] [ERROR] [ERROR] [ERROR] [ERROR]
+	SYSTEM: [speed=8] SYSTEM\: [CONNECTION LOST]
 	SYSTEM: [speed=14] GØØDΒYΞ, SΞVΞΠ.
 	do Global.fade_to(1)
+	[wait time="3.0"]
+	do Global.quit()
 - STΔY
-	???: [speed=5.5] YØU STΔY. 
-	???: [speed=5.5] JÙST LΙKΞ THΞ ØTHΞRS.
-	???: [speed=5.5] BÙT YØU’LL FØRGΞT.  
-	???: [speed=5.5] ΔLL ØF THΙS.  
+	???: [speed=5.5] JÙST LΙKΞ THΞ ØTHΞRS, . . .
+	???: [speed=5.5] YØU STΔY.
+	???: [speed=5.5] YØU’LL FØRGΞT.
 	???: [speed=5.5] ΔΠD YØU’LL SMΙLΞ ΔGΔΙΠ.
 	SYSTEM: [SIMULATION REBUILD IN PROGRESS [speed=12] .  .  .]
 	SYSTEM: [REINSTALLING NORA [speed=12] .  .  .]
-	SYSTEM: [RESETTING SUBJECT 7]
+	SYSTEM: [RESETTING SUBJECT 7 [speed=12] . . .]
 	???: [speed=8] WΞLCØMΞ BΔCK.
 	???: [speed=12]THΔΠK YØU. [speed=30] \:)
 	do Global.fade_to(0)
+	[wait time="3.0"]
+	do Global.quit()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://duepu4u3p5ux2"]
+[gd_scene load_steps=17 format=3 uid="uid://duepu4u3p5ux2"]
 
 [ext_resource type="Shader" path="res://shaders/bg_sky.gdshader" id="1_d6dwi"]
 [ext_resource type="PackedScene" uid="uid://cfpcmbj31aaqw" path="res://components/end_flag.tscn" id="2_cpa2l"]
@@ -14,6 +14,7 @@
 [ext_resource type="Resource" path="res://dialogic/level2end.dtl" id="12_wvrdc"]
 [ext_resource type="PackedScene" uid="uid://g7rsu4ya7m5j" path="res://components/jump_pad.tscn" id="13_1kujh"]
 [ext_resource type="AudioStream" uid="uid://lvecu3pye84" path="res://audio/Ambience/piano-happy.mp3" id="14_ppg3m"]
+[ext_resource type="PackedScene" uid="uid://dwwhcqh1myu0e" path="res://components/checkpoint.tscn" id="15_phdhf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jfayr"]
 shader = ExtResource("1_d6dwi")
@@ -39,7 +40,7 @@ offset_bottom = 4571.0
 metadata/_edit_use_anchors_ = true
 
 [node name="EndFlag" parent="." instance=ExtResource("2_cpa2l")]
-position = Vector2(10174, -2254)
+position = Vector2(4551, -6289)
 
 [node name="Platform" parent="." instance=ExtResource("3_ca6ur")]
 position = Vector2(649, 86)
@@ -92,6 +93,9 @@ position = Vector2(4886, -1168)
 [node name="JumpPad" parent="." instance=ExtResource("13_1kujh")]
 position = Vector2(5035, -1249)
 
+[node name="JumpPad2" parent="." instance=ExtResource("13_1kujh")]
+position = Vector2(7798, -3597)
+
 [node name="Platform10" parent="." instance=ExtResource("3_ca6ur")]
 position = Vector2(6074, -1977)
 
@@ -107,11 +111,65 @@ position = Vector2(9105, -1728)
 [node name="Platform14" parent="." instance=ExtResource("3_ca6ur")]
 position = Vector2(10180, -1966)
 
+[node name="Platform15" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(10773, -2430)
+
+[node name="Platform16" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(9916, -2781)
+
+[node name="Platform17" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(9269, -3057)
+
+[node name="Platform18" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(8652, -3267)
+
+[node name="Platform19" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(7969, -3519)
+
+[node name="Platform20" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(6363, -4945)
+
+[node name="Platform21" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(6508, -4072)
+
+[node name="Platform27" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(6731, -2300)
+
+[node name="Platform28" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(5698, -3846)
+
+[node name="Platform29" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(4971, -4481)
+
+[node name="Platform30" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(7251, -4279)
+
+[node name="Platform31" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(8616, -3750)
+
+[node name="Platform32" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(7336, -1894)
+
+[node name="Platform22" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(6118, -4497)
+
+[node name="Platform23" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(5513, -4893)
+
+[node name="Platform24" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(4986, -5283)
+
+[node name="Platform25" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(5441, -5706)
+
+[node name="Platform26" parent="." instance=ExtResource("3_ca6ur")]
+position = Vector2(4574, -6003)
+
 [node name="Player" parent="." instance=ExtResource("2_h4spq")]
 position = Vector2(633, -11)
 
 [node name="DialogueTrigger4" parent="." instance=ExtResource("5_3gq6j")]
-position = Vector2(10159, -2211)
+position = Vector2(4536, -6246)
 timeline = ExtResource("12_wvrdc")
 
 [node name="Platform3" parent="." instance=ExtResource("8_xlw8f")]
@@ -124,3 +182,10 @@ autoplay = true
 max_distance = 20000.0
 attenuation = 1e-05
 panning_strength = 0.0
+
+[node name="Checkpoint" parent="." instance=ExtResource("15_phdhf")]
+position = Vector2(9357, -2210)
+
+[node name="killbox3" parent="." instance=ExtResource("10_5cl10")]
+position = Vector2(2344, -3056)
+scale = Vector2(143.734, 3.10243)

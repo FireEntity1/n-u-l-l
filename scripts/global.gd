@@ -87,3 +87,6 @@ func setAberration(value: float):
 
 func setAttacking(value):
 	is_attacking = value
+
+func quit():
+	get_tree().quit()

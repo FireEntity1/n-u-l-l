@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="null"
-run/main_scene="res://levels/level1.tscn"
+run/main_scene="res://levels/title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -33,6 +33,7 @@ directories/dtl_directory={
 "level1end": "res://dialogic/level1end.dtl",
 "level2end": "res://dialogic/level2end.dtl",
 "level2glitch": "res://dialogic/level2glitch.dtl",
+"level2jump": "res://dialogic/level2jump.dtl",
 "level2jumppad": "res://dialogic/level2jumppad.dtl",
 "level2main": "res://dialogic/level2main.dtl",
 "level2start": "res://dialogic/level2start.dtl",

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dri2io83h5l1d"]
+[gd_scene load_steps=4 format=3 uid="uid://dri2io83h5l1d"]
 
 [ext_resource type="Shader" path="res://shaders/static.gdshader" id="1_hdvpl"]
+[ext_resource type="AudioStream" uid="uid://br4p2yfhgnkt8" path="res://audio/sfx/static.mp3" id="2_s3lik"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3sauy"]
 shader = ExtResource("1_hdvpl")
@@ -19,3 +20,12 @@ color = Color(0.103744, 0.103744, 0.103744, 1)
 material = SubResource("ShaderMaterial_3sauy")
 offset_right = 1944.0
 offset_bottom = 1094.0
+
+[node name="Static" type="AudioStreamPlayer2D" parent="layer"]
+position = Vector2(972, 571)
+stream = ExtResource("2_s3lik")
+volume_db = -7.924
+autoplay = true
+max_distance = 10000.0
+attenuation = 1e-05
+panning_strength = 0.0
