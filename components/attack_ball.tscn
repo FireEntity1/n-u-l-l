@@ -25,7 +25,7 @@ shape = SubResource("CircleShape2D_407rc")
 [node name="Boom" type="AudioStreamPlayer2D" parent="body"]
 position = Vector2(-29, 4)
 stream = ExtResource("3_7vtvr")
-volume_db = 11.39
+volume_db = 4.952
 pitch_scale = 0.58
 autoplay = true
 max_distance = 10000.0

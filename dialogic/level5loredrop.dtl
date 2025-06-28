@@ -9,7 +9,6 @@ data_log: [speed=10] [142] - [speed=5.5] [ERR] Remove failed . . .
 data_log: [speed=10] [143] - [speed=5.5] Do NOT let another one realize.
 data_log: The world will crumb[speed=1]lU̶̫̜̇͋͗̚͝ͅΞ̶͇̬̫͛̇S̵̰͕̹̖͓̲͗Ø̵̤̒̑Ṫ̷̨͇Ṋ̴̢̟̙͋̑̎͘I̷̯̤̐͒͊͋͠˚¥∂√˜¨U̶̫̜̇͋͗̚͝ͅΞ̶͇̬̫͛̇S̵̰͕̹̖͓̲͗Ø̵̤̒̑Ṫ̷̨͇Ṋ̴̢̟̙͋̑̎͘I̷̯̤̐͒͊͋͠˚¥∂√˜¨
 SYSTEM: [ERR | FILE CORRUPTED | LOG END]
-do Global.tv_static(3)
-do Global.glitch()
-[wait time="1.0"]
+do Global.tv_static(4)
+[wait time="0.1"]
 do Global.changeLevel(6)

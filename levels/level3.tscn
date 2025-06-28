@@ -185,6 +185,12 @@ position = Vector2(-14618, -5845)
 [node name="Platform21" parent="." instance=ExtResource("3_72pik")]
 position = Vector2(-13864, -6200)
 
+[node name="Platform48" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-12387, -5858)
+
+[node name="Platform49" parent="." instance=ExtResource("3_72pik")]
+position = Vector2(-11578, -6206)
+
 [node name="Platform22" parent="." instance=ExtResource("3_72pik")]
 position = Vector2(-14510, -6550)
 
@@ -231,7 +237,7 @@ position = Vector2(-7781, -5823)
 position = Vector2(-10033, -4234)
 
 [node name="Platform37" parent="." instance=ExtResource("3_72pik")]
-position = Vector2(-13846, -6978)
+position = Vector2(-11299, -6679)
 
 [node name="Platform38" parent="." instance=ExtResource("3_72pik")]
 position = Vector2(-12032, -3843)
@@ -352,7 +358,7 @@ scale = Vector2(6.67999, 5.4)
 time = 20
 
 [node name="DialogueTrigger4" parent="." instance=ExtResource("6_r6v43")]
-position = Vector2(9239, 28702)
+position = Vector2(9239, 33834)
 scale = Vector2(8.84, 4.12)
 timeline = ExtResource("15_c0k4e")
 
@@ -410,4 +416,4 @@ attenuation = 1e-05
 panning_strength = 0.0
 
 [node name="JumpPad3" parent="." instance=ExtResource("5_88khe")]
-position = Vector2(-12044, -6773)
+position = Vector2(-13236, -4851)

@@ -2,9 +2,15 @@ extends Node
 
 var killed = false
 
+var volume = 10
+var volVisible = false
+
+
 var is_attacking = false
 
 var bgshader = 8
+
+var volTimer
 
 var faded = false
 var fadeNode
@@ -18,10 +24,16 @@ var player_pos = Vector2(0,0)
 var respawn = Vector2(0,0)
 
 func _ready():
-	pass
+	volTimer = Timer.new()
+	volTimer.wait_time = 1
+	volTimer.timeout.connect(_on_vol_hide_timeout)
+	add_child(volTimer)
 
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("volUp"):
+		changeVolume(true)
+	elif Input.is_action_just_pressed("volDown"):
+		changeVolume(false)
 
 func setbgshader(value):
 	bgshader = value
@@ -96,3 +108,17 @@ func setAttacking(value):
 
 func quit():
 	get_tree().quit()
+
+func changeVolume(up: bool):
+	if volume < 10 and up:
+			volume += 1
+	elif volume > 0 and not up: 
+		volume -= 1
+	var normalized = volume/10.00
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(normalized))
+	volVisible = true
+	volTimer.stop()
+	volTimer.start()
+
+func _on_vol_hide_timeout():
+	volVisible = false

@@ -1,19 +1,19 @@
 extends CharacterBody2D
 
-var can_input = true
-
 const SPEED = 700.0
 const JUMP_VELOCITY = -900.0
 var gravity = 1600
 var slammed = false
 
+var can_input = true 
+
 var hits = 1
 
-var reset = false # death
+var reset = false # on death
 
 var jumps = 2
 
-var dir = 0
+var dir = 0 # declaring early bc dashing breaks
 
 var dashing = false
 var canDash = true
@@ -22,18 +22,17 @@ var onground = true
 
 func _ready():
 	Global.respawn = Vector2(0,0)
-	$particles.emitting = true
-	Global.setAberration(1)
-	await get_tree().create_timer(0.5).timeout
-	$particles.emitting = false
+	$particles.emitting = true # first dash lags so much if i dont do this
+	Global.setAberration(1) # ^^^
+	await get_tree().create_timer(0.5).timeout # ^^^
+	$particles.emitting = false # ^^^
 	hits = 0
 	$camera.enabled = true
 	if not Global.get_camera_mode():
 		$camera.enabled = false
 	
 
-func _physics_process(delta):
-	
+func _physics_process(delta):	
 	if hits > 3:
 		var timeline = load("res://dialogic/level7death.dtl")
 		Global.clear_dialogue()

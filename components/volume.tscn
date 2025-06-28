@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgxowqrn0d1u1"]
+
+[ext_resource type="Script" path="res://scripts/volume.gd" id="1_jlxch"]
+[ext_resource type="Texture2D" uid="uid://nay27ymopcwc" path="res://sprites/volumebar.png" id="2_5uka1"]
+[ext_resource type="Texture2D" uid="uid://b1pgggsv0fkd3" path="res://sprites/volumebar_under.png" id="2_dhvxe"]
+
+[node name="Volume" type="Node2D"]
+script = ExtResource("1_jlxch")
+
+[node name="layer" type="CanvasLayer" parent="."]
+
+[node name="volumebar" type="TextureProgressBar" parent="layer"]
+offset_left = 1308.0
+offset_top = 941.0
+offset_right = 1388.0
+offset_bottom = 957.0
+scale = Vector2(7.03089, 7.03089)
+max_value = 10.0
+value = 5.0
+texture_under = ExtResource("2_dhvxe")
+texture_progress = ExtResource("2_5uka1")

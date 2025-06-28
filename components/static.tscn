@@ -26,6 +26,6 @@ position = Vector2(972, 571)
 stream = ExtResource("2_s3lik")
 volume_db = -7.924
 autoplay = true
-max_distance = 10000.0
+max_distance = 99999.0
 attenuation = 1e-05
 panning_strength = 0.0

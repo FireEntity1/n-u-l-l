@@ -129,6 +129,11 @@ position = Vector2(14491, -401)
 rotation = 3.14159
 scale = Vector2(103.267, -63.2546)
 
+[node name="killbox4" parent="." instance=ExtResource("4_1sq5h")]
+position = Vector2(18123, -4417)
+rotation = 3.14159
+scale = Vector2(103.267, -63.2546)
+
 [node name="DialogueTrigger" parent="." instance=ExtResource("5_n3ekb")]
 position = Vector2(-168, -219)
 timeline = ExtResource("6_lbf0e")

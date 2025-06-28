@@ -196,3 +196,7 @@ position = Vector2(9357, -2210)
 [node name="killbox3" parent="." instance=ExtResource("10_5cl10")]
 position = Vector2(2344, -3056)
 scale = Vector2(143.734, 3.10243)
+
+[node name="killbox4" parent="." instance=ExtResource("10_5cl10")]
+position = Vector2(15374, -3686)
+scale = Vector2(143.734, 3.10243)

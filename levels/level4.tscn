@@ -167,6 +167,7 @@ volume_db = 8.419
 autoplay = true
 max_distance = 20000.0
 attenuation = 0.000523327
+panning_strength = 0.0
 
 [node name="chromabb" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_8348n")

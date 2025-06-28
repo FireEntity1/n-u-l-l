@@ -22,7 +22,7 @@ domain_warp_enabled = true
 domain_warp_fractal_type = 2
 domain_warp_fractal_gain = 4.19
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4p18a"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mvd4y"]
 width = 32
 height = 32
 noise = SubResource("FastNoiseLite_7uv1i")
@@ -47,7 +47,7 @@ shader_parameter/blur2 = 0.01
 shader_parameter/bg_speed = 0.1
 shader_parameter/mid_speed = 0.5
 shader_parameter/fg_speed = 1.0
-shader_parameter/noise_texture = SubResource("NoiseTexture2D_4p18a")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_mvd4y")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xxo74"]
 shader = ExtResource("3_npk6f")
@@ -110,26 +110,27 @@ animations = [{
 material = SubResource("ShaderMaterial_hx80e")
 offset_left = -432.0
 offset_top = -11698.0
-offset_right = 20607.0
+offset_right = 31255.0
 offset_bottom = 1794.0
 
 [node name="bgPixeller" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_xxo74")
 offset_left = -1454.0
 offset_top = -12347.0
-offset_right = 21485.0
+offset_right = 32190.0
 offset_bottom = 2261.0
 
 [node name="Player" parent="." instance=ExtResource("3_8nxtr")]
 position = Vector2(3840, -7587)
 
-[node name="Eerie-melody" type="AudioStreamPlayer2D" parent="Player"]
+[node name="ambience go brr" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2(6152, 406)
 stream = ExtResource("4_lr0bp")
-volume_db = 6.993
+volume_db = 7.5
 autoplay = true
 max_distance = 20000.0
 attenuation = 0.00064429
+panning_strength = 0.0
 
 [node name="Platform" parent="." instance=ExtResource("4_6ogdg")]
 position = Vector2(3831, -7417)
@@ -212,19 +213,76 @@ position = Vector2(16305, -7140)
 [node name="Platform24" parent="." instance=ExtResource("4_6ogdg")]
 position = Vector2(16624, -6758)
 
+[node name="Platform29" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(17280, -7234)
+
+[node name="Platform30" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(17733, -6839)
+
+[node name="Platform31" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(18344, -7122)
+
+[node name="Platform32" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(19053, -7288)
+
+[node name="Platform33" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(19825, -7382)
+
+[node name="Platform34" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(20463, -7117)
+
+[node name="Platform35" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(20499, -7593)
+
+[node name="Platform36" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(21294, -7373)
+
+[node name="Platform37" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(21990, -7580)
+
+[node name="Platform38" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(22780, -7495)
+
+[node name="Platform39" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(23377, -7235)
+
+[node name="Platform40" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(23986, -7349)
+
+[node name="Platform41" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(24700, -7515)
+
+[node name="Platform42" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(25247, -7287)
+
+[node name="Platform43" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(25780, -7021)
+
+[node name="Platform44" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(26460, -6712)
+
+[node name="Platform45" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(25413, -6669)
+
+[node name="Platform46" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(26022, -6493)
+
+[node name="Platform47" parent="." instance=ExtResource("4_6ogdg")]
+position = Vector2(24467, -7102)
+
 [node name="Platform11" parent="." instance=ExtResource("4_6ogdg")]
-position = Vector2(17501, -6457)
+position = Vector2(27069, -6596)
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("7_8xqvx")]
-position = Vector2(17509, -6733.88)
+position = Vector2(27077, -6872.88)
 timeline = ExtResource("8_ukuyc")
 
 [node name="orb-logs" type="AnimatedSprite2D" parent="."]
-position = Vector2(17509, -6722.88)
+position = Vector2(27077, -6861.88)
 scale = Vector2(6.625, 6.625)
 sprite_frames = SubResource("SpriteFrames_ysb8c")
 autoplay = "default"
 
 [node name="killbox" parent="." instance=ExtResource("10_ik3et")]
-position = Vector2(10028, -2341)
-scale = Vector2(414.681, 99.0909)
+position = Vector2(15435, -2341)
+scale = Vector2(526.761, 99.0909)

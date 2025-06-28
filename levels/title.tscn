@@ -1,8 +1,49 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyhgqol3p2a4t"]
+[gd_scene load_steps=10 format=3 uid="uid://dyhgqol3p2a4t"]
 
 [ext_resource type="Texture2D" uid="uid://dv7mktdtiul0e" path="res://sprites/logo.png" id="1_1v6lg"]
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_avkj1"]
 [ext_resource type="Shader" path="res://shaders/glitch.gdshader" id="2_hafm8"]
+[ext_resource type="Shader" path="res://shaders/bg.gdshader" id="2_vkof8"]
+[ext_resource type="AudioStream" uid="uid://bi14ew38rd3jh" path="res://audio/Ambience/eerie-ambience.mp3" id="5_seuyg"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_wpnn1"]
+noise_type = 4
+fractal_type = 3
+fractal_octaves = 10
+fractal_lacunarity = 1.42
+fractal_gain = 2.71
+fractal_weighted_strength = 1.0
+fractal_ping_pong_strength = 0.925
+domain_warp_enabled = true
+domain_warp_fractal_type = 2
+domain_warp_fractal_gain = 4.19
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4p18a"]
+width = 32
+height = 32
+noise = SubResource("FastNoiseLite_wpnn1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vn7pb"]
+shader = ExtResource("2_vkof8")
+shader_parameter/stars_on = true
+shader_parameter/stars_flicker = true
+shader_parameter/timeScaleFactor = 0.04
+shader_parameter/colour_muiltiplier = Color(1, 1, 1, 1)
+shader_parameter/colour_muiltiplier2 = Color(1, 1, 1, 1)
+shader_parameter/brightness = 1.925
+shader_parameter/clouds_resolution = 20.0
+shader_parameter/clouds_intesity = 0.0
+shader_parameter/waveyness = 2.635
+shader_parameter/fragmentation = 7.0
+shader_parameter/distortion = 1.051
+shader_parameter/clouds_alpha = 0.6
+shader_parameter/movement = 1.833
+shader_parameter/blur = 1.569
+shader_parameter/blur2 = 0.01
+shader_parameter/bg_speed = 0.1
+shader_parameter/mid_speed = 0.5
+shader_parameter/fg_speed = 1.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_4p18a")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ml7tk"]
 shader = ExtResource("2_hafm8")
@@ -15,12 +56,12 @@ shader_parameter/shake_color_rate = 0.01
 [node name="root" type="Node2D"]
 script = ExtResource("1_avkj1")
 
-[node name="bg" type="ColorRect" parent="."]
-offset_left = -131.0
+[node name="bg2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_vn7pb")
+offset_left = -183.0
 offset_top = -143.0
-offset_right = 2125.0
-offset_bottom = 1231.0
-color = Color(0, 0, 0, 1)
+offset_right = 2084.0
+offset_bottom = 1159.0
 
 [node name="title" type="Sprite2D" parent="."]
 position = Vector2(989, 279)
@@ -35,20 +76,26 @@ offset_bottom = 812.0
 theme_override_font_sizes/font_size = 100
 text = "ΞΠTΞR"
 
+[node name="label" type="Label" parent="."]
+offset_left = 1334.0
+offset_top = 999.0
+offset_right = 1567.0
+offset_bottom = 1028.0
+scale = Vector2(3.07915, 3.07915)
+text = "VØLUMΞ CØΠTRØLS: +/-"
+
 [node name="title shader" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_ml7tk")
-offset_left = 285.0
-offset_top = 87.0
-offset_right = 1681.0
-offset_bottom = 441.0
+offset_left = -96.0
+offset_top = -132.0
+offset_right = 2062.0
+offset_bottom = 1211.0
 mouse_filter = 2
 
-[node name="title shader2" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_ml7tk")
-offset_left = 322.0
-offset_top = 521.0
-offset_right = 1718.0
-offset_bottom = 875.0
-mouse_filter = 2
+[node name="Eerie-ambience" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(979, 549)
+stream = ExtResource("5_seuyg")
+volume_db = 8.419
+autoplay = true
 
 [connection signal="button_up" from="enter_button" to="." method="_on_enter_button_button_up"]
