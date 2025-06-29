@@ -45,7 +45,9 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_k3iv6"]
 script = ExtResource("1_3ynmo")
 scene = ExtResource("7_c10f6")
-overrides = {}
+overrides = {
+"font_size_custom": "32.0"
+}
 
 [sub_resource type="Resource" id="Resource_uffva"]
 script = ExtResource("1_3ynmo")
@@ -74,4 +76,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_3ynmo")]([])
-metadata/_latest_layer = "10"
+metadata/_latest_layer = "12"

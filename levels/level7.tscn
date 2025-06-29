@@ -138,16 +138,10 @@ offset_right = 4503.0
 offset_bottom = 1645.0
 
 [node name="FinalBossPlatform" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(-400, -341)
+position = Vector2(-600, -100)
 
 [node name="FinalBossPlatform6" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(400, -341)
-
-[node name="FinalBossPlatform2" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(-982, 92)
-
-[node name="FinalBossPlatform3" parent="." instance=ExtResource("1_yiw31")]
-position = Vector2(982, 83)
+position = Vector2(600, -100)
 
 [node name="entity" type="AnimatedSprite2D" parent="."]
 scale = Vector2(7.75, 7.75)
@@ -155,7 +149,7 @@ sprite_frames = SubResource("SpriteFrames_6krk6")
 autoplay = "default"
 
 [node name="Player" parent="." instance=ExtResource("2_kosf7")]
-position = Vector2(-389, -479)
+position = Vector2(-600, -261)
 
 [node name="bossCamera" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)
@@ -182,10 +176,11 @@ scale = Vector2(10.9261, 9.63943)
 sprite_frames = SubResource("SpriteFrames_0s5gc")
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("4_p0rry")]
-position = Vector2(-408, -570)
+position = Vector2(-602, -310)
 timeline = ExtResource("7_oheaj")
 
 [node name="attackTimer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
 [node name="killbox" parent="." instance=ExtResource("9_wnyy2")]

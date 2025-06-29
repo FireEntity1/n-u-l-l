@@ -163,7 +163,7 @@ position = Vector2(477, -5468)
 [node name="ambience" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2(4932, 1578)
 stream = ExtResource("12_10moa")
-volume_db = 8.419
+volume_db = 10.895
 autoplay = true
 max_distance = 20000.0
 attenuation = 0.000523327

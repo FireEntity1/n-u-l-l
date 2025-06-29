@@ -11,11 +11,19 @@ do Global.setAttacking(false)
 ???: THΞ 6 BΞFØRΞ YØU TRΙΞD TØ ΞSCΔPΞ TØØ.
 ???: YØU’RΞ THΞ ØΠLY ØΠΞ STΙLL HΞRΞ.
 do Global.setAttacking(true)
-[wait time="30.0"]
+[wait time="10.0"]
+do Global.glitch(1)
+[wait time="10.0"]
+do Global.glitch(1)
+[wait time="5.0"]
+do Global.glitch(1)
+[wait time="5.0"]
 do Global.setAttacking(false)
 [music channel="1" fade="0.0" volume="0.0"]
-[music path="res://audio/Ambience/???_interaction.mp3" fade="0.0" volume="0.0"]
-do Global.setAberration(0.15)
+[music path="res://audio/Ambience/???_interaction.mp3" fade="0.0" volume="1.2"]
+do Global.setAberration(6)
+do Global.disable_camera()
+do Global
 ???: [speed=5.5] YØU'VΞ CØMΞ TØØ FΔR.
 ???: [speed=5.5] THΞ CΔGΞ WΔS MΞΔNT TØ PRØTΞCT YØU. . .
 ???: [speed=5.5] FRØM THΞ WØRLD. FRØM YØURSELF.
@@ -36,9 +44,9 @@ do Global.setAberration(0.15)
 	SYSTEM: [MEMORY ERR]
 	SYSTEM: [ERROR] [ERROR] [ERROR] [ERROR] [ERROR]
 	SYSTEM: [speed=8] SYSTEM\: [CONNECTION LOST]
-	SYSTEM: [speed=14] GØØDΒYΞ, SΞVΞΠ.
-	do Global.fade_to(1)
-	[wait time="3.0"]
+	???: [speed=14] GØØDΒYΞ, SΞVΞΠ.
+	do Global.fade_to(0)
+	[wait time="5.0"]
 	do Global.quit()
 - STΔY
 	???: [speed=5.5] JÙST LΙKΞ THΞ ØTHΞRS, . . .
@@ -50,6 +58,6 @@ do Global.setAberration(0.15)
 	SYSTEM: [RESETTING SUBJECT 7 [speed=12] . . .]
 	???: [speed=8] WΞLCØMΞ BΔCK.
 	???: [speed=12]THΔΠK YØU. [speed=30] \:)
-	do Global.fade_to(0)
-	[wait time="3.0"]
+	do Global.fade_to(1)
+	[wait time="5.0"]
 	do Global.quit()

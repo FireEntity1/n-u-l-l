@@ -32,7 +32,7 @@ func _ready():
 		$camera.enabled = false
 	
 
-func _physics_process(delta):	
+func _physics_process(delta):
 	if hits > 3:
 		var timeline = load("res://dialogic/level7death.dtl")
 		Global.clear_dialogue()

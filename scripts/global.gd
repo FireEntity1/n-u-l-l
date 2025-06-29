@@ -29,6 +29,9 @@ func _ready():
 	volTimer.timeout.connect(_on_vol_hide_timeout)
 	add_child(volTimer)
 
+func _physics_process(delta):
+	print(aberration)
+
 func _process(delta):
 	if Input.is_action_just_pressed("volUp"):
 		changeVolume(true)
@@ -122,3 +125,10 @@ func changeVolume(up: bool):
 
 func _on_vol_hide_timeout():
 	volVisible = false
+
+func stopInput(time: float):
+	var scene = preload("res://components/disable_input.tscn")
+	var instance = scene.instantiate()
+	instance.time = time
+	instance.position = player_pos
+	add_child(instance)
