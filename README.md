@@ -2,9 +2,11 @@
 
 #### A short ( 5-10 minute ) long story platformer!
 
-**​NOTE: VOLUME MAY BE LOUD, PRESS - OR + TO ADJUST!!**
+Playable at [https://fire-entity.itch.io/null](https://fire-entity.itch.io/null)
 
 ## Controls (additionally explained ingame):
+
+**​NOTE: VOLUME MAY BE LOUD, PRESS - OR + TO ADJUST!!**
 
 A/D or L Arrow / R Arrow - Move
 
