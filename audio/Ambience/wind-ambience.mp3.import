@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/wind-ambience.mp3-9e794366ecd6c6f8f7f1b6e5789
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

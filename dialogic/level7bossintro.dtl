@@ -1,3 +1,4 @@
+do Global.disable_camera()
 ???: [speed=18] ƗΜ ŞØŘŘ¥
 [sound path="res://audio/sfx/BOOM.mp3" volume="0.0"]
 [music path="res://audio/Ambience/intense_boss_music.mp3" channel="1" fade="0.0" volume="0.0"]
@@ -17,13 +18,15 @@ do Global.glitch(1)
 do Global.glitch(1)
 [wait time="5.0"]
 do Global.glitch(1)
-[wait time="5.0"]
+[wait time="2.5"]
+do Global.glitch(1)
+[wait time="2.5"]
 do Global.setAttacking(false)
 [music channel="1" fade="0.0" volume="0.0"]
 [music path="res://audio/Ambience/???_interaction.mp3" fade="0.0" volume="1.2"]
 do Global.setAberration(6)
-do Global.disable_camera()
 do Global
+do Global.glitch(400)
 ???: [speed=5.5] YØU'VΞ CØMΞ TØØ FΔR.
 ???: [speed=5.5] THΞ CΔGΞ WΔS MΞΔNT TØ PRØTΞCT YØU. . .
 ???: [speed=5.5] FRØM THΞ WØRLD. FRØM YØURSELF.

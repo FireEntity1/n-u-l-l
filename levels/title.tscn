@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dyhgqol3p2a4t"]
+[gd_scene load_steps=11 format=3 uid="uid://dyhgqol3p2a4t"]
 
 [ext_resource type="Texture2D" uid="uid://dv7mktdtiul0e" path="res://sprites/logo.png" id="1_1v6lg"]
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_avkj1"]
 [ext_resource type="Shader" path="res://shaders/glitch.gdshader" id="2_hafm8"]
 [ext_resource type="Shader" path="res://shaders/bg.gdshader" id="2_vkof8"]
 [ext_resource type="AudioStream" uid="uid://bi14ew38rd3jh" path="res://audio/Ambience/eerie-ambience.mp3" id="5_seuyg"]
+[ext_resource type="AudioStream" uid="uid://0jor3k4y452x" path="res://audio/sfx/type-blip.wav" id="6_ou8ut"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_wpnn1"]
 noise_type = 4
@@ -97,5 +98,12 @@ position = Vector2(979, 549)
 stream = ExtResource("5_seuyg")
 volume_db = 8.419
 autoplay = true
+attenuation = 1e-05
+
+[node name="entersfx" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(979, 488)
+stream = ExtResource("6_ou8ut")
+max_distance = 10000.0
+attenuation = 0.000172633
 
 [connection signal="button_up" from="enter_button" to="." method="_on_enter_button_button_up"]

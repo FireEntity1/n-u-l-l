@@ -152,7 +152,8 @@ autoplay = "default"
 position = Vector2(-600, -261)
 
 [node name="bossCamera" type="Camera2D" parent="."]
-zoom = Vector2(0.6, 0.6)
+offset = Vector2(0, -275)
+zoom = Vector2(0.8, 0.8)
 
 [node name="glitch" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_xdfqd")

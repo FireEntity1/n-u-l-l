@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/ambience-l5.mp3-50b586a09f67964bc7c0bb28a5fe9
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

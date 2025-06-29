@@ -1,5 +1,3 @@
 do Global.setAttacking(false)
-do Global.fade_to(1)
-[wait time="5.0"]
-do Global.remove_fade()
+do Global.tv_static(5)
 do Global.changeLevel(7)

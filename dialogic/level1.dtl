@@ -1,4 +1,5 @@
 [style name="style"]
+do Global.remove_fade()
 join NORA center
 NORA: Welcome [SUBJECT]! \
 (X or ENTER)

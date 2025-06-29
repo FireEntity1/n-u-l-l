@@ -29,9 +29,6 @@ func _ready():
 	volTimer.timeout.connect(_on_vol_hide_timeout)
 	add_child(volTimer)
 
-func _physics_process(delta):
-	print(aberration)
-
 func _process(delta):
 	if Input.is_action_just_pressed("volUp"):
 		changeVolume(true)
@@ -62,6 +59,9 @@ func glitch(duration):
 	var glitch_scene = preload("res://components/glitch_screen.tscn")
 	var glitch = glitch_scene.instantiate()
 	get_tree().root.add_child(glitch)
+	clearGlitch(duration,glitch)
+
+func clearGlitch(duration, glitch):
 	await get_tree().create_timer(duration).timeout
 	glitch.queue_free()
 
@@ -104,7 +104,6 @@ func set_player_pos(position: Vector2):
 
 func setAberration(value: float):
 	aberration = value/20
-	print(aberration)
 
 func setAttacking(value):
 	is_attacking = value
