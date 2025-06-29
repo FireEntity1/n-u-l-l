@@ -2,6 +2,8 @@
 
 #### A short ( 5-10 minute ) long story platformer!
 
+**​NOTE: VOLUME MAY BE LOUD, PRESS - OR + TO ADJUST!!**
+
 ## Controls (additionally explained ingame):
 
 A/D or L Arrow / R Arrow - Move
