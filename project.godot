@@ -13,6 +13,8 @@ config_version=5
 config/name="null"
 run/main_scene="res://levels/title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://sprites/logo.png"
 config/icon="res://icon.svg"
 
 [autoload]
